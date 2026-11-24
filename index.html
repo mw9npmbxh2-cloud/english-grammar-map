@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>خريطة قواعد الإنجليزية A2 → B1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* layout: tree mind map. Root, 7 branch stations, topics as tappable leaves joined by route lines; one-sided on phones, two-sided from 920px */
+  --bg:#edf1f4; --surface:#ffffff; --sunken:#e2e8ed; --ink:#15212c; --muted:#566575; --line:#cbd5dd;
+  --accent:#0d6f8c; --accent-ink:#ffffff;
+  --ok:#1b8455; --bad:#bf3d37; --due:#a86a10;
+  --ok-bg:#e2f3ea; --bad-bg:#fbe7e5; --due-bg:#f8edd6;
+  --scrim:rgba(10,18,26,.55);
+  --font-ar:"IBM Plex Sans Arabic","Noto Sans Arabic","Segoe UI",Tahoma,sans-serif;
+  --font-en:"IBM Plex Sans","IBM Plex Sans Arabic","Segoe UI",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d141b; --surface:#16202a; --sunken:#0f1820; --ink:#e7edf2; --muted:#93a2b1; --line:#2b3846;
+    --accent:#56b9d4; --accent-ink:#06222b;
+    --ok:#4fc48d; --bad:#f07a72; --due:#e2ae4c;
+    --ok-bg:#12301f; --bad-bg:#3a1917; --due-bg:#33270f;
+    --scrim:rgba(0,0,0,.65);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d141b; --surface:#16202a; --sunken:#0f1820; --ink:#e7edf2; --muted:#93a2b1; --line:#2b3846;
+  --accent:#56b9d4; --accent-ink:#06222b;
+  --ok:#4fc48d; --bad:#f07a72; --due:#e2ae4c;
+  --ok-bg:#12301f; --bad-bg:#3a1917; --due-bg:#33270f;
+  --scrim:rgba(0,0,0,.65);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html{-webkit-text-size-adjust:100%}
+html.lock{overflow:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-ar);font-size:15px;line-height:1.6;overflow-x:hidden}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.en{font-family:var(--font-en);unicode-bidi:isolate}
+.wrap{max-width:1180px;margin:0 auto;padding:16px}
+
+/* header */
+.top{display:flex;flex-direction:column;gap:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.brand h1{margin:0;font-size:21px;font-weight:700;line-height:1.3;text-wrap:balance}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.stats{display:flex;gap:8px;flex-wrap:wrap}
+.stat{flex:1 1 90px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.stat b{display:block;direction:ltr;unicode-bidi:isolate;text-align:right;font-size:17px;font-weight:700;font-variant-numeric:tabular-nums;font-family:var(--font-en)}
+.stat span{font-size:12px;color:var(--muted)}
+.stat.s-due b{color:var(--due)} .stat.s-ok b{color:var(--ok)} .stat.s-bad b{color:var(--bad)}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:10px 16px;font-weight:600;font-size:15px;min-height:44px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);flex:1 1 180px}
+.btn.ghost{background:transparent}
+.btn.small{min-height:36px;padding:6px 12px;font-size:13px}
+.btn:disabled{opacity:.5;cursor:default}
+@media (min-width:920px){
+  .top{flex-direction:row;align-items:center;justify-content:space-between;gap:24px}
+  .stats{flex:0 0 auto} .stat{flex:0 0 118px}
+  .btn.primary{flex:0 0 auto}
+}
+
+/* toolbar */
+.bar{display:flex;flex-direction:column;gap:10px;padding:14px 0}
+.seg{display:inline-flex;background:var(--sunken);border-radius:10px;padding:3px;align-self:flex-start}
+.seg button{border:0;background:transparent;border-radius:8px;padding:7px 16px;font-weight:600;font-size:14px;color:var(--muted);min-height:38px}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.search{flex:1 1 200px;min-width:0;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:9px 12px;font-size:16px;min-height:42px}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;max-width:100%}
+.chip-btn{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--muted);min-height:36px}
+.chip-btn[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+@media (min-width:920px){.bar{flex-direction:row;align-items:center;justify-content:space-between}}
+
+/* map */
+.map{position:relative;display:flex;flex-direction:column;gap:22px;padding:4px 0 8px}
+.wires{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:visible}
+.root,.bnode,.leaf{position:relative;z-index:1}
+.root{background:var(--ink);color:var(--bg);border-radius:14px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.root .r-title{font-weight:700;font-size:15px}
+.root .r-level{font-family:var(--font-en);font-weight:600;font-size:17px;unicode-bidi:isolate}
+.root .r-count{font-size:12px;opacity:.8;font-variant-numeric:tabular-nums}
+.side{display:flex;flex-direction:column;gap:22px}
+.branch{display:flex;align-items:center;gap:26px}
+.bnode{flex:0 0 92px;border:2px solid var(--bc);background:var(--surface);border-radius:14px;padding:8px 6px 9px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px}
+.bnode .num{width:24px;height:24px;border-radius:50%;background:var(--bc);color:#fff;font-family:var(--font-en);font-weight:600;font-size:13px;display:grid;place-items:center}
+.bnode .b-ar{font-size:13px;font-weight:700;line-height:1.35}
+.bnode .b-en{font-size:11px;color:var(--muted);line-height:1.3}
+.bnode .b-count{direction:ltr;unicode-bidi:isolate;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;font-family:var(--font-en)}
+.leaves{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:8px}
+.branch.collapsed .leaves{display:none}
+.branch.collapsed .bnode{border-style:dashed}
+.leaf{display:flex;align-items:center;gap:10px;width:100%;min-height:54px;padding:7px 10px;text-align:right;background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--bc);border-radius:10px}
+.leaf.dim{opacity:.28}
+.leaf .ring{flex:0 0 30px;width:30px;height:30px}
+.ring .trk{fill:none;stroke:var(--line);stroke-width:4}
+.ring .prg{fill:none;stroke:var(--bc);stroke-width:4;stroke-linecap:round}
+.ring .chk{fill:none;stroke:var(--ok);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.ring .duedot{fill:var(--due);stroke:var(--surface);stroke-width:2}
+.leaf.st-mastered .prg{stroke:var(--ok)}
+.leaf-txt{flex:1 1 0;min-width:0;display:flex;flex-direction:column}
+.leaf-txt .en{font-weight:600;font-size:14px;line-height:1.35;text-align:right;overflow-wrap:anywhere}
+.leaf-txt .ar{font-size:12px;color:var(--muted);line-height:1.4}
+.lv{flex:0 0 auto;font-family:var(--font-en);font-size:11px;font-weight:600;border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:var(--muted);unicode-bidi:isolate}
+@media (min-width:920px){
+  .map{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);column-gap:64px;align-items:center}
+  .side-a{grid-column:1;grid-row:1} .root{grid-column:2;grid-row:1} .side-b{grid-column:3;grid-row:1}
+  .side-a .branch{flex-direction:row-reverse}
+  .root{flex-direction:column;justify-content:center;text-align:center;width:168px;min-height:168px;border-radius:50%;gap:4px}
+  .bnode{flex-basis:128px}
+  .branch{gap:48px}
+  .leaf{max-width:340px}
+  .side-a .leaves{align-items:flex-end}
+  .side-a .leaf{border-inline-start:1px solid var(--line);border-inline-end:4px solid var(--bc)}
+}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);padding:6px 0 14px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:5px;vertical-align:-1px}
+.foot{border-top:1px solid var(--line);margin-top:18px;padding:14px 0;font-size:12px;color:var(--muted);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:center}
+
+/* errors view */
+.err h2{font-size:17px;margin:4px 0 2px} .err h3{font-size:15px;margin:22px 0 8px}
+.err p.sub{margin:0 0 12px;color:var(--muted);font-size:13px}
+.err-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(60px,1fr) 34px;gap:10px;align-items:center;width:100%;text-align:right;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin-bottom:6px;min-height:48px}
+.err-row .nm{font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.err-row .track{height:8px;background:var(--sunken);border-radius:4px;overflow:hidden}
+.err-row .track i{display:block;height:100%;background:var(--bad);border-radius:4px}
+.err-row .n{font-family:var(--font-en);font-weight:600;font-variant-numeric:tabular-nums;text-align:center}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:18px;color:var(--muted);font-size:14px}
+.act-item{background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--bad);border-radius:10px;padding:8px 12px;margin-bottom:6px}
+.act-item .meta{font-size:12px;color:var(--muted)}
+
+/* overlays */
+.overlay{position:fixed;inset:0;z-index:50;background:var(--scrim);display:flex;align-items:flex-end;justify-content:center}
+.panel{background:var(--surface);color:var(--ink);width:100%;max-width:680px;max-height:94%;overflow-y:auto;border-radius:18px 18px 0 0;padding:16px 16px 28px;display:flex;flex-direction:column;gap:14px}
+.drill .panel{height:100%;max-height:100%;border-radius:0}
+@media (min-width:720px){
+  .overlay{align-items:center;padding:24px}
+  .panel{border-radius:18px;max-height:100%}
+  .drill .panel{height:auto;min-height:420px;border-radius:18px}
+}
+.p-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.p-head h2{margin:0;font-size:21px;line-height:1.3}
+.p-head .p-sub{font-size:13px;color:var(--muted)}
+.x{flex:0 0 auto;width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:transparent;font-size:18px;line-height:1}
+.box{background:var(--sunken);border-radius:12px;padding:12px 14px}
+.box h4{margin:0 0 6px;font-size:12px;font-weight:600;color:var(--muted)}
+.box p{margin:0;font-size:14px}
+.formula{display:flex;flex-direction:column;gap:6px}
+.formula div{white-space:pre-wrap;font-family:var(--font-mono);font-size:13px;direction:ltr;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;overflow-wrap:anywhere}
+.kcard{background:var(--sunken);border-radius:12px;padding:24px 16px;text-align:center}
+.kcard .k-en{font-size:21px;font-weight:600;margin:0;line-height:1.3}
+.kcard .k-ar{margin:4px 0 0;color:var(--muted)}
+.kstack{display:flex;flex-direction:column;gap:10px}
+.key{border-inline-start:4px solid var(--due);background:var(--due-bg)}
+.pair{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-bottom:1px solid var(--line)}
+.pair:last-child{border-bottom:0}
+.sent{font-family:var(--font-en);direction:ltr;text-align:left;margin:0;font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.sent.was{color:var(--bad)} .sent.now{color:var(--ok)}
+.sent del{text-decoration:line-through;background:var(--bad-bg);border-radius:3px;padding:0 2px}
+.sent ins{text-decoration:none;font-weight:600;background:var(--ok-bg);border-radius:3px;padding:0 2px}
+.meter{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.meter .track{flex:1;height:8px;background:var(--sunken);border-radius:4px;overflow:hidden}
+.meter .track i{display:block;height:100%;background:var(--accent);border-radius:4px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.row .btn{flex:1 1 140px}
+
+/* drill */
+.d-top{display:flex;align-items:center;gap:12px}
+.d-top .d-title{font-weight:700;font-size:15px;flex:1;min-width:0}
+.d-top .d-count{direction:ltr;unicode-bidi:isolate;font-family:var(--font-en);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.d-bar{height:6px;background:var(--sunken);border-radius:3px;overflow:hidden}
+.d-bar i{display:block;height:100%;background:var(--accent);border-radius:3px;transition:width .25s}
+.kicker{margin:0;font-size:13px;font-weight:600;color:var(--muted)}
+.badline{font-family:var(--font-en);direction:ltr;text-align:left;font-size:17px;line-height:1.5;margin:0;padding:12px 14px;background:var(--bad-bg);border-inline-end:4px solid var(--bad);border-radius:10px;overflow-wrap:anywhere}
+.q{font-family:var(--font-en);direction:ltr;text-align:left;font-size:17px;line-height:1.5;margin:0;overflow-wrap:anywhere}
+#ans{width:100%;font-family:var(--font-en);font-size:17px;line-height:1.5;direction:ltr;text-align:left;border:2px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg);resize:vertical;min-height:84px}
+#ans:focus{border-color:var(--accent);outline:none}
+.hint{margin:0;font-size:13px;color:var(--due);min-height:1.6em}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{font-family:var(--font-en);direction:ltr;text-align:left;font-size:16px;border:2px solid var(--line);background:var(--bg);border-radius:10px;padding:11px 14px;min-height:48px;overflow-wrap:anywhere}
+.opt.right{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.fb{border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.fb.good{background:var(--ok-bg)} .fb.bad{background:var(--bad-bg)}
+.fb-title{margin:0;font-weight:700;font-size:15px}
+.fb.good .fb-title{color:var(--ok)} .fb.bad .fb-title{color:var(--bad)}
+.fb-label{margin:4px 0 0;font-size:12px;color:var(--muted)}
+.fb .sent{color:var(--ink)} .fb .sent.was{color:var(--bad)} .fb .sent.now{color:var(--ok)}
+.rule{margin:6px 0 0;font-size:13px;border-top:1px solid var(--line);padding-top:8px}
+.rule b{display:block;text-align:right}
+.rule .sep{display:none}
+.sum-score{direction:ltr;unicode-bidi:isolate;text-align:right;font-family:var(--font-en);font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;margin:0}
+.miss{display:flex;flex-direction:column;gap:6px}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>خريطة قواعد الإنجليزية <span class="en">A2 → B1</span></h1>
+      <p>كل قواعد المستوى: تحفظ المفتاح، تصحّح الخطأ بالكتابة، ويرجع لك لين يثبت.</p>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="actions" id="actions"></div>
+  </header>
+
+  <div class="bar">
+    <div class="seg" role="group" aria-label="طريقة العرض">
+      <button type="button" data-act="view" data-v="map" aria-pressed="true">الخريطة</button>
+      <button type="button" data-act="view" data-v="err" aria-pressed="false">أخطائي</button>
+    </div>
+    <div class="tools" id="map-tools">
+      <input class="search" id="search" type="search" placeholder="ابحث: Present, did, modal…" autocomplete="off" aria-label="ابحث عن قاعدة">
+      <div class="chips" role="group" aria-label="تصفية">
+        <button type="button" class="chip-btn" data-act="filter" data-f="all" aria-pressed="true">الكل</button>
+        <button type="button" class="chip-btn" data-act="filter" data-f="A2" aria-pressed="false">A2</button>
+        <button type="button" class="chip-btn" data-act="filter" data-f="B1" aria-pressed="false">B1</button>
+        <button type="button" class="chip-btn" data-act="filter" data-f="due" aria-pressed="false">للمراجعة</button>
+        <button type="button" class="chip-btn" data-act="filter" data-f="mastered" aria-pressed="false">متقن</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="view-map" aria-label="الخريطة">
+      <div class="legend">
+        <span><i style="background:var(--line)"></i>جديد</span>
+        <span><i style="background:var(--accent)"></i>قيد التعلّم (الحلقة تمتلئ)</span>
+        <span><i style="background:var(--due)"></i>عليه مراجعة اليوم</span>
+        <span><i style="background:var(--ok)"></i>متقن</span>
+      </div>
+      <div class="map" id="map">
+        <svg class="wires" id="wires" aria-hidden="true"></svg>
+        <div class="root" id="root"></div>
+        <div class="side side-a" id="side-a"></div>
+        <div class="side side-b" id="side-b"></div>
+      </div>
+    </section>
+    <section id="view-err" class="err" aria-label="أخطائي" hidden></section>
+  </main>
+
+  <footer class="foot">
+    <span id="sync">التقدّم محفوظ على هذا الجهاز.</span>
+    <button type="button" class="btn small ghost" data-act="sound" id="btn-sound">الصوت: شغّال</button>
+  </footer>
+</div>
+
+<div class="overlay" id="sheet" hidden><div class="panel" id="sheet-panel" role="dialog" aria-modal="true" aria-label="تفاصيل القاعدة"></div></div>
+<div class="overlay drill" id="drill" hidden><div class="panel" id="drill-panel" role="dialog" aria-modal="true" aria-label="تدريب"></div></div>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- المحتوى: 9 فروع، 43 قاعدة ---------- */
+const BRANCHES=[
+ {id:8,ar:"أساسيات الجملة",en:"Sentence Basics",color:"#12909e"},
+ {id:9,ar:"الأسئلة",en:"Questions",color:"#8d6e4a"},
+ {id:1,ar:"الأزمنة الأساسية",en:"Core Tenses",color:"#2b7fd9"},
+ {id:2,ar:"الأزمنة التامة",en:"Perfect Tenses",color:"#7a5cd6"},
+ {id:3,ar:"الأفعال الناقصة",en:"Modal Verbs",color:"#bf8412"},
+ {id:4,ar:"الأسماء والأدوات والكميات",en:"Nouns & Quantifiers",color:"#cf4a80"},
+ {id:5,ar:"الصفات والوصل وبناء الجملة",en:"Modifiers & Clauses",color:"#1f9a69"},
+ {id:6,ar:"تراكيب B1 الأساسية",en:"Core B1 Structures",color:"#5361d3"},
+ {id:7,ar:"أدوات الربط",en:"Linking Words",color:"#d5641f"}
+];
+
+/* fx = [الجملة الخطأ, التصحيح أو قائمة تصحيحات مقبولة] · qz = [السؤال, [الصحيح, خطأ, خطأ], السبب] */
+const TOPICS=[
+{id:1,b:1,lv:"A2",ar:"المضارع البسيط",en:"Present Simple",
+ f:["Subject + Verb (+ s/es with He/She/It)","Subject + do/does not + Verb (base)","Do/Does + Subject + Verb (base)?"],
+ ex:"يُستخدم للعادات والروتين اليومي، وللحقائق الثابتة التي لا تتغير.",
+ key:"مع He/She/It يُضاف للفعل ‎-s. وعند النفي أو السؤال بـ does يرجع الفعل لأصله بدون ‎-s.",
+ fx:[["He work in the hospital every day.","He works in the hospital every day."],
+     ["Does she knows the patient's name?","Does she know the patient's name?"],
+     ["The pharmacy close at 10 PM every night.","The pharmacy closes at 10 PM every night."],
+     ["She don't work on Fridays.","She doesn't work on Fridays."],
+     ["The system send a reminder every morning.","The system sends a reminder every morning."],
+     ["Where does he works now?","Where does he work now?"]],
+ qz:[["My colleague always ______ the new patients where to wait.",["tells","tell","telling"],"الفاعل مفرد (My colleague) فيأخذ الفعل ‎-s في المضارع البسيط."],
+     ["Dr. Ahmed does not ______ at the clinic on Sundays.",["work","works","worked"],"بعد does not يرجع الفعل لأصله (work)."]]},
+{id:2,b:1,lv:"A2",ar:"المضارع المستمر",en:"Present Continuous",
+ f:["Subject + am/is/are + Verb-ing","Subject + am/is/are not + Verb-ing","Am/Is/Are + Subject + Verb-ing?"],
+ ex:"للأحداث التي تقع الآن لحظة الكلام، أو للأنشطة المؤقتة هذه الفترة.",
+ key:"لا تنسَ am/is/are قبل الفعل المنتهي بـ ‎-ing أبداً.",
+ fx:[["Please be quiet. The doctors discussing the case now.","Please be quiet. The doctors are discussing the case now."],
+     ["I working on a new report this week.","I am working on a new report this week."],
+     ["The nurse preparing the room right now.","The nurse is preparing the room right now."],
+     ["We are wait for the lab results.","We are waiting for the lab results."],
+     ["Why you are calling the IT desk?","Why are you calling the IT desk?"],
+     ["He is not answer his phone at the moment.","He is not answering his phone at the moment."]],
+ qz:[["The IT team ______ a server update right now.",["is performing","performing","performs"],"right now تدل على المضارع المستمر: is + Verb-ing."],
+     ["Why ______ the schedule at this moment?",["are you changing","you are changing","do you changing"],"في السؤال يتقدم الفعل المساعد على الفاعل: are you changing."]]},
+{id:3,b:1,lv:"A2",ar:"الماضي البسيط",en:"Past Simple",
+ f:["Subject + Verb-ed / V2 (irregular)","Subject + did not + Verb (base)","Did + Subject + Verb (base)?"],
+ ex:"لحدث اكتمل وانتهى في وقت محدد بالماضي.",
+ key:"did تأخذ علامة الماضي لوحدها، فالفعل بعد did أو didn't يرجع لأصله.",
+ fx:[["Yesterday the app suddenly stop working.","Yesterday the app suddenly stopped working."],
+     ["We did not received the email last night.","We did not receive the email last night."],
+     ["I send the report two days ago.","I sent the report two days ago."],
+     ["Did you checked the backup yesterday?","Did you check the backup yesterday?"],
+     ["She didn't came to the meeting last week.","She didn't come to the meeting last week."],
+     ["The patient leaved the clinic an hour ago.","The patient left the clinic an hour ago."]],
+ qz:[["The nurse ______ the doctor as soon as the patient arrived.",["called","calls","calling"],"حدث مكتمل في الماضي يأخذ التصريف الثاني (called)."],
+     ["Did the manager ______ your shift request yesterday?",["approve","approved","approving"],"وجود Did يرجع الفعل لأصله (approve)."]]},
+{id:4,b:1,lv:"A2",ar:"الماضي المستمر",en:"Past Continuous",
+ f:["Subject + was/were + Verb-ing","Subject + was/were not + Verb-ing","Was/Were + Subject + Verb-ing?"],
+ ex:"حدث كان مستمراً في الماضي ثم قاطعه حدث آخر.",
+ key:"غالباً while مع الماضي المستمر (was/were + ‎-ing)، و when قبل الماضي البسيط.",
+ fx:[["I talked on the phone when the power went out.","I was talking on the phone when the power went out."],
+     ["While we reviewing files, the phone rang.","While we were reviewing files, the phone rang."],
+     ["She was type the report when the system froze.","She was typing the report when the system froze."],
+     ["While the doctor examining the patient, the alarm rang.","While the doctor was examining the patient, the alarm rang."],
+     ["They was waiting in the hall when I arrived.","They were waiting in the hall when I arrived."],
+     ["What you were doing at 8 PM last night?","What were you doing at 8 PM last night?"]],
+ qz:[["I ______ the medical report when the doctor walked in.",["was writing","wrote","am writing"],"حدث مستمر في الماضي (was writing) قاطعه دخول الطبيب."],
+     ["While the staff ______ lunch, an emergency call came in.",["were having","had","are having"],"بعد while يأتي الماضي المستمر، و staff هنا جمع: were having."]]},
+{id:5,b:1,lv:"A2/B1",ar:"صيغ المستقبل",en:"Future: will / going to",
+ f:["will + base  |  am/is/are going to + base","won't + base  |  isn't going to + base","Will + Subj + base?  |  Is/Are + Subj + going to + base?"],
+ ex:"will للقرار اللحظي والوعد. going to للخطة المسبقة أو الدليل الواضح. المضارع المستمر للموعد المحجوز المؤكد.",
+ key:"قرار لحظي = will · خطة أو دليل أمامك = going to · موعد في التقويم = Present Continuous.",
+ fx:[["Look at the dark clouds! It will rain.","Look at the dark clouds! It is going to rain."],
+     ["I meeting the director tomorrow at 10 AM.","I am meeting the director tomorrow at 10 AM."],
+     ["I will to send you the file tonight.","I will send you the file tonight."],
+     ["We going to install the update next week.","We are going to install the update next week."],
+     ["She is going to travels on Sunday.","She is going to travel on Sunday."],
+     ["He will not comes to the meeting tomorrow.","He will not come to the meeting tomorrow."]],
+ qz:[["The phone is ringing. - Don't worry, I ______ it!",["will answer","am going to answer","answer"],"قرار لحظي عند سماع الهاتف: will."],
+     ["We have already bought the tickets; we ______ London next month.",["are visiting","will visit","visit"],"شراء التذاكر ترتيب مؤكد، فيُفضّل المضارع المستمر."]]},
+
+{id:6,b:2,lv:"B1",ar:"المضارع التام البسيط",en:"Present Perfect Simple",
+ f:["Subject + have/has + V3","Subject + have/has not + V3","Have/Has + Subject + V3?"],
+ ex:"يربط الماضي بالحاضر: حدث وقع بدون تحديد وقته، أو بدأ في الماضي وما زال مستمراً.",
+ key:"since لنقطة البداية (since 2014) و for لطول المدة (for 5 years).",
+ fx:[["I worked in this hospital since 2014.","I have worked in this hospital since 2014."],
+     ["The lab team didn't sent the results yet.",["The lab team has not sent the results yet.","The lab team have not sent the results yet."]],
+     ["She has work here for three years.","She has worked here for three years."],
+     ["We have finish the update already.",["We have finished the update already.","We have already finished the update."]],
+     ["I have been here since two hours.","I have been here for two hours."],
+     ["He have just arrived at the clinic.","He has just arrived at the clinic."]],
+ qz:[["Dr. Khalid ______ at this medical clinic for eight years.",["has worked","worked","is working"],"for مع مدة مستمرة حتى الآن تتطلب المضارع التام."],
+     ["We ______ three urgent emails so far this morning.",["have received","received","receive"],"so far تربط الحدث بالحاضر، فنستخدم المضارع التام."]]},
+{id:7,b:2,lv:"B1",ar:"المضارع التام والماضي البسيط",en:"Present Perfect vs Past Simple",
+ f:["Past Simple = finished, specific time  |  Present Perfect = unspecified or ongoing time","didn't + base  |  haven't/hasn't + V3","Did you...?  |  Have you...?"],
+ ex:"الماضي البسيط للوقت المحدد المنتهي (yesterday, in 2020). المضارع التام للخبرة أو لحدث وقته غير محدد.",
+ key:"حددت الزمن (last week, ago, yesterday) = ماضي بسيط. ما حددت، أو استخدمت ever/never/already = مضارع تام.",
+ fx:[["I have seen that patient yesterday.","I saw that patient yesterday."],
+     ["Did you ever visit the Riyadh headquarters?","Have you ever visited the Riyadh headquarters?"],
+     ["We have installed the new system last month.","We installed the new system last month."],
+     ["I never used this software before.","I have never used this software before."],
+     ["She has called me an hour ago.","She called me an hour ago."],
+     ["When have you joined the hospital?","When did you join the hospital?"]],
+ qz:[["I ______ my medical report last night at 9 PM.",["submitted","have submitted","submit"],"الوقت محدد بدقة (last night at 9 PM) فنستخدم الماضي البسيط."],
+     ["She ______ three different hospitals in her career so far.",["has managed","managed","was managing"],"خبرة حتى الآن بدون وقت محدد: المضارع التام."]]},
+{id:8,b:2,lv:"B1",ar:"المضارع التام المستمر",en:"Present Perfect Continuous",
+ f:["Subject + have/has been + Verb-ing","Subject + have/has not been + Verb-ing","Have/Has + Subject + been + Verb-ing?"],
+ ex:"يركز على طول المدة لحدث بدأ في الماضي وما زال مستمراً أو آثاره واضحة الآن.",
+ key:"مدة مستمرة لحد الآن مع for/since لا تأخذ المضارع المستمر (am waiting) بل have been waiting.",
+ fx:[["I am waiting for two hours!","I have been waiting for two hours!"],
+     ["She has being studying all morning.","She has been studying all morning."],
+     ["We are working on this problem since Monday.","We have been working on this problem since Monday."],
+     ["He has been work here since 2020.","He has been working here since 2020."],
+     ["How long are you waiting?","How long have you been waiting?"],
+     ["They have been test the server all day.","They have been testing the server all day."]],
+ qz:[["Sorry I'm late; I ______ for a parking space for 30 minutes.",["have been looking","looked","am looking"],"التركيز على استمرار الفعل 30 دقيقة: have been looking."],
+     ["The engineers ______ the server issue since 8 AM.",["have been investigating","investigated","are investigating"],"نشاط مستمر من وقت محدد حتى الآن: المضارع التام المستمر."]]},
+{id:9,b:2,lv:"B1",ar:"الماضي التام",en:"Past Perfect",
+ f:["Subject + had + V3","Subject + had not + V3","Had + Subject + V3?"],
+ ex:"لتمييز الحدث الأقدم بين حدثين وقعا في الماضي.",
+ key:"الحدث الأقدم = had + V3 · الحدث الأحدث = ماضي بسيط.",
+ fx:[["When I arrived, the meeting already started.","When I arrived, the meeting had already started."],
+     ["The patient already left when the doctor arrived.","The patient had already left when the doctor arrived."],
+     ["By the time we called, the pharmacy has closed.","By the time we called, the pharmacy had closed."],
+     ["I could not log in because I had forget my password.","I could not log in because I had forgotten my password."],
+     ["She said she had saw the report before.","She said she had seen the report before."],
+     ["When we reached the office, the manager already went home.","When we reached the office, the manager had already gone home."]],
+ qz:[["By the time the ambulance arrived, the team ______ first aid.",["had provided","provided","has provided"],"الإسعافات تمت قبل وصول الإسعاف، فالأقدم يأخذ had provided."],
+     ["I realized I ______ my ID card at home after I reached the office.",["had left","left","have left"],"نسيان البطاقة وقع قبل الوصول للمكتب: الماضي التام."]]},
+{id:10,b:2,lv:"B1",ar:"الاعتياد في الماضي",en:"Used to",
+ f:["Subject + used to + Verb (base)","Subject + did not use to + Verb (base)","Did + Subject + use to + Verb (base)?"],
+ ex:"لعادة أو حالة كانت تتكرر في الماضي ثم توقفت الآن.",
+ key:"بعد used to يأتي الفعل بأصله. ومع did أو didn't تُحذف d فتصير use to.",
+ fx:[["I used to working night shifts.","I used to work night shifts."],
+     ["He didn't used to like medical IT.","He didn't use to like medical IT."],
+     ["We use to print every report.","We used to print every report."],
+     ["She used to works in the emergency department.","She used to work in the emergency department."],
+     ["Did he used to manage this unit?","Did he use to manage this unit?"],
+     ["I was used to live near the hospital.","I used to live near the hospital."]],
+ qz:[["Our department ______ use paper files, but now everything is digital.",["used to","was used","uses to"],"وضع سابق تغيّر الآن: used to + base."],
+     ["Did you ______ live near the central hospital?",["use to","used to","using to"],"مع Did تُحذف d: use to."]]},
+
+{id:11,b:3,lv:"A2",ar:"القدرة والاستئذان",en:"Can / Could / Be able to",
+ f:["Subject + can/could + Verb (base)","Subject + cannot/could not + Verb (base)","Can/Could + Subject + Verb (base)?"],
+ ex:"can للقدرة والاستئذان في الحاضر. could للقدرة في الماضي أو للطلب المؤدب. be able to للقدرة في بقية الأزمنة.",
+ key:"بعد can و could يأتي الفعل مباشرة: بدون to وبدون ‎-s. ولا تجتمع can مع will أو do.",
+ fx:[["Can you to send the file?","Can you send the file?"],
+     ["Yesterday I can't access the system.","Yesterday I couldn't access the system."],
+     ["She can speaks three languages.","She can speak three languages."],
+     ["I could not to open the attachment.","I could not open the attachment."],
+     ["He doesn't can come today.","He cannot come today."],
+     ["Will you can attend the meeting tomorrow?","Will you be able to attend the meeting tomorrow?"]],
+ qz:[["Excuse me, ______ you please explain this prescription?",["could","can to","are able"],"للطلب المؤدب: could ثم الفعل مباشرة."],
+     ["After three weeks of training, she is now ______ handle the software alone.",["able to","can","could"],"بعد is تأتي able to للتعبير عن اكتساب القدرة."]]},
+{id:12,b:3,lv:"B1",ar:"الإلزام والمنع وعدم الضرورة",en:"Must / Have to / Mustn't",
+ f:["must / have to + base (obligation)","mustn't = ممنوع  |  don't have to = ليس ضرورياً","Do you have to...?"],
+ ex:"must و have to للإلزام. الفرق في النفي: mustn't تعني المنع، و don't have to تعني أن الأمر اختياري.",
+ key:"mustn't = ممنوع · don't have to = براحتك، مو إجباري.",
+ fx:[["You mustn't pay, it's free.","You don't have to pay, it's free."],
+     ["Staff don't have to smoke inside the hospital.","Staff mustn't smoke inside the hospital."],
+     ["You must to wear gloves in the lab.","You must wear gloves in the lab."],
+     ["She have to finish the report today.","She has to finish the report today."],
+     ["Visitors don't have to touch the equipment. It is dangerous.","Visitors mustn't touch the equipment. It is dangerous."],
+     ["Do I must sign this form?",["Do I have to sign this form?","Must I sign this form?"]]],
+ qz:[["Employees ______ wear their security ID badges inside the facility at all times.",["must","don't have to","might"],"قواعد العمل الملزمة: must."],
+     ["Tomorrow is a public holiday, so we ______ wake up early.",["don't have to","mustn't","shouldn't to"],"لا توجد ضرورة للاستيقاظ: don't have to."]]},
+{id:13,b:3,lv:"A2",ar:"النصيحة والاقتراح",en:"Should / Shouldn't",
+ f:["Subject + should + Verb (base)","Subject + should not + Verb (base)","Should + Subject + Verb (base)?"],
+ ex:"لتقديم النصيحة والرأي والتوجيه.",
+ key:"لا تضع to بعد should. الصحيح should check وليس should to check.",
+ fx:[["You should to review the report.","You should review the report."],
+     ["He shouldn't to ignore the symptoms.","He shouldn't ignore the symptoms."],
+     ["You should checking the cable first.","You should check the cable first."],
+     ["She should takes a break.","She should take a break."],
+     ["We don't should share passwords.","We shouldn't share passwords."],
+     ["What I should do now?","What should I do now?"]],
+ qz:[["Before sending the file to the manager, we should ______ all figures.",["verify","to verify","verifying"],"بعد should يأتي الفعل بأصله بدون to."],
+     ["Patients with acute symptoms ______ wait in the reception area.",["should not","should not to","don't should"],"النفي: should not ثم الفعل مباشرة."]]},
+{id:14,b:3,lv:"B1",ar:"الاحتمال والاستنتاج",en:"May / Might / Deduction",
+ f:["may / might / could + base  |  must be / can't be","may not / might not + base","Might it be...?"],
+ ex:"may و might للاحتمال غير الأكيد. must be لاستنتاج شبه أكيد، و can't be لاستنتاج أن الشيء مستحيل.",
+ key:"may/might = ربما · must be = أكيد كذا · can't be = مستحيل. والاستنتاج المنفي can't وليس mustn't.",
+ fx:[["She worked all night, so she can be very tired.","She worked all night, so she must be very tired."],
+     ["The lab results might to be ready.","The lab results might be ready."],
+     ["He may comes late today.","He may come late today."],
+     ["It can't to be true.","It can't be true."],
+     ["She might not to attend the meeting.","She might not attend the meeting."],
+     ["He left an hour ago, so he mustn't be in the office.","He left an hour ago, so he can't be in the office."]],
+ qz:[["Dr. Salem hasn't left his office yet; he ______ still busy with a patient.",["must be","can't be","must to be"],"استنتاج منطقي شبه أكيد: must be."],
+     ["We ______ get the delivery today, but it depends on traffic.",["might","must","can't"],"التردد (depends on traffic) يدل على احتمال: might."]]},
+
+{id:15,b:4,lv:"A2",ar:"أدوات النكرة والمعرفة",en:"Articles (a / an / the)",
+ f:["a + consonant sound  |  an + vowel sound  |  the + specific thing","No article with plurals and uncountable nouns in general","-"],
+ ex:"a/an للمفرد المعدود غير المحدد (a doctor, an hour). the للشيء المحدد المعروف للطرفين.",
+ key:"المفرد المعدود لازم قبله أداة (a/an/the). ولا تضع a/an قبل الجمع أو غير المعدود.",
+ fx:[["I need a help with this task.","I need help with this task."],
+     ["She is an doctor at the hospital.","She is a doctor at the hospital."],
+     ["He is engineer in the IT department.","He is an engineer in the IT department."],
+     ["I waited for a hour.","I waited for an hour."],
+     ["Please close door.","Please close the door."],
+     ["I have meeting at 3 PM.","I have a meeting at 3 PM."]],
+ qz:[["He is ______ experienced specialist in neurology.",["an","a","the"],"experienced تبدأ بصوت متحرك والاسم مفرد: an."],
+     ["Please print ______ final report on my desk.",["the","a","an"],"التقرير محدد (on my desk): the."]]},
+{id:16,b:4,lv:"A2",ar:"الأسماء غير المعدودة",en:"Uncountable Nouns",
+ f:["Uncountable noun + singular verb (no a/an, no plural -s)","Use some / much / a lot of / a piece of","-"],
+ ex:"أسماء تُعامل كمفرد دائماً، لا تُجمع ولا تسبقها a/an. أشهرها في العمل: information, advice, equipment, news, progress, research.",
+ key:"عامِل هذه الكلمات مثل water: بدون a/an وبدون ‎-s، والفعل معها مفرد.",
+ fx:[["The manager gave me an advice.",["The manager gave me advice.","The manager gave me some advice.","The manager gave me a piece of advice."]],
+     ["We bought new equipments.","We bought new equipment."],
+     ["I need more informations about the patient.","I need more information about the patient."],
+     ["The news are good today.","The news is good today."],
+     ["She did a lot of researches on this topic.","She did a lot of research on this topic."],
+     ["We made a good progress this week.","We made good progress this week."]],
+ qz:[["The IT technician gave us very useful ______ about data safety.",["information","an information","informations"],"information غير معدود: بدون an وبدون جمع."],
+     ["Our department has made significant ______ this quarter.",["progress","a progress","progresses"],"progress غير معدود."]]},
+{id:17,b:4,lv:"A2/B1",ar:"محددات الكمية",en:"Quantifiers",
+ f:["many / a few + countable plural  |  much / a little + uncountable","some in affirmative  |  any in negatives and questions","too = more than needed  |  adjective + enough"],
+ ex:"many للمعدود الجمع و much لغير المعدود. a few لعدد قليل و a little لكمية قليلة. enough تأتي بعد الصفة وقبل الاسم.",
+ key:"معدود (doctors, files) = many / few · غير معدود (time, money) = much / little.",
+ fx:[["We don't have many time left.","We don't have much time left."],
+     ["The room is enough big.","The room is big enough."],
+     ["How much patients are waiting?","How many patients are waiting?"],
+     ["There is a few water in the bottle.","There is a little water in the bottle."],
+     ["We don't have some gloves left.","We don't have any gloves left."],
+     ["I have too much emails to answer.","I have too many emails to answer."]],
+ qz:[["There are only ______ spots left for the medical training workshop.",["a few","a little","much"],"spots جمع معدود: a few."],
+     ["Do we have ______ gloves in the storage cabinet?",["any","some","much"],"في السؤال عن الوجود نستخدم any."]]},
+{id:18,b:4,lv:"B1",ar:"تركيب One of",en:"One of + plural noun",
+ f:["One of the + PLURAL noun + SINGULAR verb","One of my friends is...  |  One of the rules requires...","Is one of...?"],
+ ex:"الاسم بعد one of يكون جمعاً (واحد من مجموعة)، لكن الفعل يعود على one فيكون مفرداً.",
+ key:"اسم جمع + فعل مفرد: One of the doctors IS here.",
+ fx:[["One of my colleague is absent.","One of my colleagues is absent."],
+     ["One of the main rules require an ID.","One of the main rules requires an ID."],
+     ["One of the printers are broken.","One of the printers is broken."],
+     ["One of the nurse called me.","One of the nurses called me."],
+     ["One of our servers need an update.","One of our servers needs an update."],
+     ["One of the best doctor in the city works here.","One of the best doctors in the city works here."]],
+ qz:[["One of the senior surgeons ______ leading the operation today.",["is","are","were"],"الفعل يعود على One المفردة: is."],
+     ["One of our hospital ______ moved to a new branch last week.",["units","unit","an unit"],"بعد One of يأتي اسم جمع: units."]]},
+
+{id:19,b:5,lv:"A2",ar:"المقارنة والتفضيل",en:"Comparatives & Superlatives",
+ f:["short adj + -er than  |  more + long adj + than","the + short adj + -est  |  the most + long adj","not as + adj + as"],
+ ex:"للمقارنة بين اثنين: ‎-er للصفة القصيرة (faster than) و more للطويلة (more expensive than). للتفضيل على الكل: the ‎-est أو the most.",
+ key:"لا تجمع more مع ‎-er. الصحيح faster وليس more faster. وبعد المقارنة than وليس then.",
+ fx:[["This app is more faster than the old one.","This app is faster than the old one."],
+     ["He is the most good doctor.","He is the best doctor."],
+     ["This room is more big than my office.","This room is bigger than my office."],
+     ["The new system is better then the old one.","The new system is better than the old one."],
+     ["Today is the most busy day of the week.","Today is the busiest day of the week."],
+     ["This report is not as long than the last one.","This report is not as long as the last one."]],
+ qz:[["The new diagnostic system is much ______ than the previous version.",["more reliable","reliabler","most reliable"],"reliable صفة طويلة: more reliable than."],
+     ["Dr. Laila is one of the ______ cardiologists in the region.",["best","goodest","better"],"تفضيل good الشاذ: the best."]]},
+{id:20,b:5,lv:"A2/B1",ar:"الصفات والأظرف وصفات ‎-ed/-ing",en:"Adjectives vs Adverbs, -ed / -ing",
+ f:["adjective describes a noun  |  adverb (-ly) describes a verb","-ed = how a person feels  |  -ing = the thing that causes it","-"],
+ ex:"الصفة تصف الاسم (fast car) والظرف يصف الفعل (drove quickly). صفات ‎-ed للشخص الذي يشعر (bored) وصفات ‎-ing للشيء المسبب (boring job).",
+ key:"الشعور = ‎-ed · المسبب = ‎-ing. وانتبه للشواذ: good ← well و hard ← hard.",
+ fx:[["He speaks English clear.","He speaks English clearly."],
+     ["The long lecture made me confusing.","The long lecture made me confused."],
+     ["She works very hardly.","She works very hard."],
+     ["I am very interesting in this course.","I am very interested in this course."],
+     ["The meeting was very bored.","The meeting was very boring."],
+     ["He did the job very good.","He did the job very well."]],
+ qz:[["The technician checked the database ______ before resetting.",["carefully","careful","carefulness"],"الكلمة تصف الفعل checked فتكون ظرفاً: carefully."],
+     ["Working a 12-hour night shift is extremely ______.",["tiring","tired","tire"],"العمل هو المسبب للتعب: tiring."]]},
+{id:21,b:5,lv:"B1",ar:"جمل الوصل",en:"Relative Clauses",
+ f:["who (people)  |  which / that (things)  |  where (places)  |  whose (possession)","-","-"],
+ ex:"تربط جملتين وتعطي معلومة إضافية عن الاسم بدون تكراره.",
+ key:"عاقل = who · غير عاقل = which/that · مكان = where · ملكية = whose. ولا تكرر الضمير بعدها (who I met وليس who I met him).",
+ fx:[["The doctor which treated me was helpful.",["The doctor who treated me was helpful.","The doctor that treated me was helpful."]],
+     ["This is the clinic when I was trained.","This is the clinic where I was trained."],
+     ["The nurse who I met her was very kind.",["The nurse who I met was very kind.","The nurse that I met was very kind.","The nurse whom I met was very kind.","The nurse I met was very kind."]],
+     ["The report who you sent is missing a page.",["The report that you sent is missing a page.","The report which you sent is missing a page.","The report you sent is missing a page."]],
+     ["This is the doctor who his clinic is on the second floor.","This is the doctor whose clinic is on the second floor."],
+     ["The app that we use it every day is slow.",["The app that we use every day is slow.","The app which we use every day is slow.","The app we use every day is slow."]]],
+ qz:[["The patient ______ file was misplaced has arrived at reception.",["whose","who","which"],"علاقة ملكية بين المريض وملفه: whose."],
+     ["The software ______ we installed last week is working perfectly.",["that","who","where"],"software غير عاقل: that أو which."]]},
+{id:22,b:5,lv:"A2",strict:true,ar:"حدود الجمل وعلامات الترقيم",en:"Sentence Boundaries",
+ f:["Complete sentence = Subject + Verb. Then a new sentence.","Avoid comma splices: sentence, sentence","-"],
+ ex:"لا تربط جملتين مستقلتين بفاصلة فقط. أنهِ الجملة بنقطة، اترك مسافة، وابدأ التالية بحرف كبير.",
+ key:"نقطة ثم مسافة ثم حرف كبير. التصحيح هنا يُحسب بالحرف: انتبه للنقطة والمسافة والحرف الكبير.",
+ fx:[["I opened my laptop, then I read my emails.",["I opened my laptop. Then, I read my emails.","I opened my laptop. Then I read my emails."]],
+     ["I opened the app.Then I checked the schedule.",["I opened the app. Then I checked the schedule.","I opened the app. Then, I checked the schedule."]],
+     ["the meeting starts at 9 AM.","The meeting starts at 9 AM."],
+     ["I finished the report, I sent it to the manager.",["I finished the report. I sent it to the manager.","I finished the report, and I sent it to the manager.","I finished the report and sent it to the manager.","I finished the report; I sent it to the manager."]],
+     ["The system was down.we called IT.","The system was down. We called IT."],
+     ["She arrived late, however, she finished on time.",["She arrived late. However, she finished on time.","She arrived late; however, she finished on time."]]],
+ qz:[["Which sentence has CORRECT punctuation and spacing?",["I finished the morning shift. After that, I went home.","I finished the morning shift, after that, I went home.","I finished the morning shift.after that, I went home."],"الجملة تنتهي بنقطة، ثم مسافة، ثم حرف كبير."],
+     ["The doctor arrived early ______ he prepared all surgery tools.",[". Then,",", then","then"],"فكرتان مستقلتان: نبدأ جملة جديدة بـ . Then,"]]},
+
+{id:23,b:6,lv:"B1",ar:"الأفعال المتبوعة بـ ‎-ing أو to",en:"Gerunds vs Infinitives",
+ f:["+ -ing: enjoy, mind, be busy, spend time, look forward to","+ to + base: decide, hope, need, want, agree","-"],
+ ex:"بعض الأفعال والتراكيب يأتي بعدها فعل بـ ‎-ing، وأخرى يأتي بعدها to + الفعل بأصله.",
+ key:"look forward to يليه ‎-ing دائماً: look forward to meeting you.",
+ fx:[["I was busy to prepare the report.","I was busy preparing the report."],
+     ["We decided changing the schedule.","We decided to change the schedule."],
+     ["I look forward to hear from you.","I look forward to hearing from you."],
+     ["She enjoys to work with patients.","She enjoys working with patients."],
+     ["We need update the software.","We need to update the software."],
+     ["Do you mind to wait a few minutes?","Do you mind waiting a few minutes?"]],
+ qz:[["Thank you for the update; I look forward to ______ you next Tuesday.",["meeting","meet","to meet"],"look forward to يليه ‎-ing: meeting."],
+     ["The management team agreed ______ the new policy starting next month.",["to implement","implementing","implement"],"agree يتبعه to + base."]]},
+{id:24,b:6,lv:"A2/B1",ar:"الشرطية الصفرية والأولى",en:"Conditionals 0 & 1",
+ f:["Zero: If + Present Simple, Present Simple (facts)","First: If + Present Simple, will + base (real possibility)","What will happen if...?"],
+ ex:"الصفرية للحقائق والنتائج المضمونة. الأولى لموقف واقعي محتمل في المستقبل.",
+ key:"فعل جملة if دائماً مضارع بسيط. لا تضع will في شق if.",
+ fx:[["If you will call him, he will answer.","If you call him, he will answer."],
+     ["If water reaches 100 degrees, it will boil.","If water reaches 100 degrees, it boils."],
+     ["If it will rain tomorrow, we will cancel the event.","If it rains tomorrow, we will cancel the event."],
+     ["If she come late, the manager will be angry.","If she comes late, the manager will be angry."],
+     ["I call you if I will finish early.","I will call you if I finish early."],
+     ["If you press this button, the screen will turns off.",["If you press this button, the screen turns off.","If you press this button, the screen will turn off."]]],
+ qz:[["If the patient ______ any adverse reactions, notify the doctor immediately.",["develops","will develop","developed"],"في شق if نضع مضارعاً بسيطاً: develops."],
+     ["We ______ the project on time if all team members cooperate.",["will complete","complete","completed"],"جواب الشرط لموقف مستقبلي محتمل: will complete."]]},
+{id:25,b:6,lv:"B1",ar:"الشرطية الثانية",en:"Second Conditional",
+ f:["If + Past Simple, would + Verb (base)","If I didn't have..., I would...","What would you do if...?"],
+ ex:"لموقف تخيلي غير واقعي أو مستبعد في الحاضر.",
+ key:"شق if ماضي بسيط، والجواب would + base. ويُفضّل were مع كل الضمائر: If I were you.",
+ fx:[["If I have more time, I would help you.","If I had more time, I would help you."],
+     ["If I was the manager, I will change this.",["If I were the manager, I would change this.","If I was the manager, I would change this."]],
+     ["If I would have a car, I would drive to work.","If I had a car, I would drive to work."],
+     ["If she knew the answer, she will tell us.","If she knew the answer, she would tell us."],
+     ["What would you do if you win a million riyals?","What would you do if you won a million riyals?"],
+     ["If I were you, I will talk to the manager.","If I were you, I would talk to the manager."]],
+ qz:[["If we ______ a bigger budget, we would upgrade all hospital devices.",["had","have","will have"],"الافتراض التخيلي يتطلب ماضياً بسيطاً في شق if: had."],
+     ["What ______ you do if you lost all system access codes?",["would","will","did"],"جواب الشرطية الثانية: would + base."]]},
+{id:26,b:6,lv:"B1",ar:"المبني للمجهول",en:"Passive Voice",
+ f:["Present: Subject + am/is/are + V3  |  Past: Subject + was/were + V3","is not + V3  |  were not + V3","Was the file updated?"],
+ ex:"يُستخدم حين يكون التركيز على الفعل والحدث وليس على من قام به.",
+ key:"المبني للمجهول = فعل be حسب الزمن + التصريف الثالث V3 دائماً.",
+ fx:[["The report prepared yesterday.","The report was prepared yesterday."],
+     ["Daily emails are send by the system.","Daily emails are sent by the system."],
+     ["The patient was examine by Dr. Ali.","The patient was examined by Dr. Ali."],
+     ["The files is stored on the server.","The files are stored on the server."],
+     ["The new clinic opened by the minister last year.","The new clinic was opened by the minister last year."],
+     ["English is speak in many countries.","English is spoken in many countries."]],
+ qz:[["All patient records ______ securely in the digital database.",["are stored","are store","stored"],"السجلات يتم تخزينها (مجهول مضارع): are stored."],
+     ["The urgent message ______ to all doctors last night.",["was delivered","delivered","was deliver"],"مجهول في الماضي: was + V3."]]},
+{id:27,b:6,lv:"B1",ar:"الكلام المنقول",en:"Reported Speech",
+ f:["Present Simple → Past Simple  |  Present Continuous → Past Continuous  |  will → would  |  can → could","say + (that)  |  tell + person + (that)","-"],
+ ex:"عند نقل كلام شخص ترجع الأزمنة خطوة للماضي، وتتغير الضمائر وتعبيرات الزمن.",
+ key:"Present ← Past · will ← would · can ← could. و tell لازم بعدها شخص (told me) أما say فلا (said that).",
+ fx:[["He said that he is busy.","He said that he was busy."],
+     ["She told me she will call later.","She told me she would call later."],
+     ["She said me that the server was down.",["She told me that the server was down.","She said that the server was down.","She said to me that the server was down."]],
+     ["He said he can fix the printer.","He said he could fix the printer."],
+     ["They told that they were ready.",["They said that they were ready.","They told me that they were ready.","They told us that they were ready."]],
+     ["The nurse said that the patient is sleeping.","The nurse said that the patient was sleeping."]],
+ qz:[["The director said that the new hospital branch ______ open next month.",["would","will","is"],"بعد said تتحول will إلى would."],
+     ["Sara told me she ______ working on the monthly summary.",["was","is","has"],"is working تصير في المنقول was working."]]},
+
+{id:28,b:7,lv:"A2/B1",ar:"أدوات الربط",en:"Linking Words",
+ f:["Contrast: However, / Although + clause / Despite + noun or -ing","Cause: because + clause / because of + noun","Result: so / Therefore, + clause"],
+ ex:"because للسبب، so و therefore للنتيجة، و although و however و despite للتناقض.",
+ key:"although بعدها جملة كاملة، و despite بعدها اسم أو ‎-ing. ولا تجمع although مع but ولا because مع so في نفس الجملة.",
+ fx:[["Despite he was tired, he worked.",["Although he was tired, he worked.","Despite being tired, he worked."]],
+     ["Because the server crashed, so we stopped work.",["Because the server crashed, we stopped work.","The server crashed, so we stopped work."]],
+     ["Although it was late, but she continued working.",["Although it was late, she continued working.","It was late, but she continued working."]],
+     ["Despite of the delay, we finished on time.",["Despite the delay, we finished on time.","In spite of the delay, we finished on time."]],
+     ["I was late because of the traffic was heavy.",["I was late because the traffic was heavy.","I was late because of the heavy traffic."]],
+     ["In spite the rain, the clinic opened on time.",["In spite of the rain, the clinic opened on time.","Despite the rain, the clinic opened on time."]]],
+ qz:[["______ the heavy rain and traffic delays, all doctors arrived on time.",["Despite","Although","Because"],"بعدها اسم بدون فعل (the heavy rain): Despite."],
+     ["The main server crashed during the night; ______, morning appointments were delayed.",["therefore","although","because"],"للتعبير عن النتيجة: therefore."]]},
+{id:29,b:8,lv:"A2",ar:"الوجود: يوجد",en:"There is / There are",
+ f:["There is + singular or uncountable  |  There are + plural","There isn't / There aren't + any","Is there...?  |  Are there...?"],
+ ex:"لقول إن شيئاً موجود في مكان. is مع المفرد وغير المعدود، و are مع الجمع.",
+ key:"الفعل يتبع الاسم اللي بعده: There is a printer / There are two printers. ولا تستخدم It has أو There have للوجود.",
+ fx:[["There is two printers in the office.","There are two printers in the office."],
+     ["There are a problem with the server.","There is a problem with the server."],
+     ["Is there any chairs in the waiting room?","Are there any chairs in the waiting room?"],
+     ["It has a pharmacy near the hospital.","There is a pharmacy near the hospital."],
+     ["There have many patients today.","There are many patients today."],
+     ["There aren't some beds available.","There aren't any beds available."]],
+ qz:[["______ a meeting room on the second floor?",["Is there","Are there","Has there"],"a meeting room مفرد: Is there."],
+     ["______ three nurses on duty tonight.",["There are","There is","They are"],"three nurses جمع: There are."]]},
+{id:30,b:8,lv:"A2",ar:"الضمائر والملكية",en:"Pronouns & Possessives",
+ f:["Subject: I he she we they  |  Object: me him her us them","my his her our their + noun  |  mine his hers ours theirs (alone)","Reflexive: myself, yourself, himself, herself, ourselves, themselves"],
+ ex:"ضمير الفاعل قبل الفعل، وضمير المفعول بعد الفعل أو حرف الجر. صفة الملكية قبل الاسم (my file) وضمير الملكية لوحده (it is mine).",
+ key:"بعد الفعل وحرف الجر: me / him / her / us / them. قبل الاسم: my / his / her / our / their. و it's = it is أما its فللملكية.",
+ fx:[["Please send the report to I.","Please send the report to me."],
+     ["This is she office.","This is her office."],
+     ["The doctor asked they to wait.","The doctor asked them to wait."],
+     ["This laptop is my.","This laptop is mine."],
+     ["He fixed the printer hisself.","He fixed the printer himself."],
+     ["The hospital changed it's logo.","The hospital changed its logo."]],
+ qz:[["Dr. Sara is busy. Can you call ______ later?",["her","she","hers"],"بعد الفعل call يأتي ضمير المفعول: her."],
+     ["Is this badge yours? - No, ______ is in my pocket.",["mine","my","me"],"لا يوجد اسم بعدها، فنستخدم ضمير الملكية: mine."]]},
+{id:31,b:8,lv:"A2",ar:"صيغة الأمر",en:"Imperatives",
+ f:["Verb (base) + ...   Wait here.","Don't + Verb (base)   Don't touch it.","Let's + Verb (base)   Let's start."],
+ ex:"للأوامر والتعليمات والإرشادات. نبدأ بالفعل بأصله مباشرة بدون فاعل.",
+ key:"الأمر يبدأ بالفعل بأصله بدون to. والنهي Don't + الفعل (وليس No أو Not). وللاقتراح Let's + الفعل.",
+ fx:[["Not touch the screen.","Don't touch the screen."],
+     ["Please to sit down.","Please sit down."],
+     ["Don't to forget your badge.","Don't forget your badge."],
+     ["Let's to start the meeting.","Let's start the meeting."],
+     ["Closes the door, please.","Close the door, please."],
+     ["No open this file.","Don't open this file."]],
+ qz:[["______ your hands before entering the room.",["Wash","Washing","To wash"],"الأمر يبدأ بالفعل بأصله: Wash."],
+     ["______ use your phone in the lab.",["Don't","Not","No"],"النهي: Don't + الفعل."]]},
+{id:32,b:8,lv:"A2",ar:"ظروف التكرار وترتيب الجملة",en:"Frequency Adverbs & Word Order",
+ f:["Subject + adverb + main verb   She always arrives early.","Subject + be + adverb   He is never late.","Subject + Verb + Object + Place + Time"],
+ ex:"always, usually, often, sometimes, never تأتي قبل الفعل الأساسي وبعد فعل be. وترتيب الجملة ثابت: فاعل، فعل، مفعول، ثم المكان، ثم الزمان.",
+ key:"قبل الفعل الأساسي وبعد be: I always check / I am always ready. والمفعول يلصق بالفعل: I like my job very much.",
+ fx:[["She arrives always early.","She always arrives early."],
+     ["He never is late.","He is never late."],
+     ["I like very much my job.","I like my job very much."],
+     ["We have every Monday a meeting.",["We have a meeting every Monday.","Every Monday we have a meeting.","Every Monday, we have a meeting."]],
+     ["Always I check my email in the morning.","I always check my email in the morning."],
+     ["I go usually to work by car.","I usually go to work by car."]],
+ qz:[["The manager ______ the reports on Sunday.",["usually reviews","reviews usually","is usually review"],"الظرف قبل الفعل الأساسي: usually reviews."],
+     ["Which sentence has the correct word order?",["I sent the file to the manager yesterday.","I sent yesterday the file to the manager.","I yesterday sent to the manager the file."],"فاعل، فعل، مفعول، ثم الزمان في الآخر."]]},
+{id:33,b:8,lv:"A2",ar:"حروف الجر للزمان والمكان",en:"Prepositions: in / on / at",
+ f:["at + clock time / exact point   at 9 AM, at the reception, at night","on + day / date / surface   on Monday, on 5 May, on the desk","in + month / year / part of day / inside   in June, in 2024, in the morning, in the room"],
+ ex:"at للوقت المحدد والنقطة، on لليوم والتاريخ والسطح، in للشهر والسنة والمكان المغلق.",
+ key:"at للساعة · on لليوم · in للشهر والسنة. ولا حرف جر قبل last / next / this / every: next week وليس in next week.",
+ fx:[["The meeting is in Monday.","The meeting is on Monday."],
+     ["I start work on 8 AM.","I start work at 8 AM."],
+     ["She joined the hospital on 2019.","She joined the hospital in 2019."],
+     ["I will call you in next week.","I will call you next week."],
+     ["He arrived to the office late.","He arrived at the office late."],
+     ["I usually work in night.","I usually work at night."]],
+ qz:[["The clinic opens ______ 7 AM ______ weekdays.",["at / on","in / on","at / in"],"at للساعة و on للأيام."],
+     ["My appointment is ______ the morning.",["in","on","at"],"أجزاء اليوم: in the morning."]]},
+{id:34,b:9,lv:"A2",ar:"تكوين السؤال",en:"Question Formation",
+ f:["Wh-word + auxiliary + Subject + Verb?   Where do you work?","With be: Wh-word + be + Subject?   Where is the file?","Subject question, no auxiliary:   Who called you?"],
+ ex:"في السؤال يتقدم الفعل المساعد (do / does / did / is / are / can) على الفاعل. وإذا كان السؤال عن الفاعل نفسه فلا نستخدم do / does / did.",
+ key:"كلمة السؤال + مساعد + فاعل + فعل: Where does she work? وسؤال الفاعل بدون مساعد: Who sent this?",
+ fx:[["Where you work?","Where do you work?"],
+     ["What time the clinic opens?","What time does the clinic open?"],
+     ["Why she is late?","Why is she late?"],
+     ["Who did send this email?","Who sent this email?"],
+     ["How many patients you saw yesterday?","How many patients did you see yesterday?"],
+     ["What means this word?","What does this word mean?"]],
+ qz:[["Where ______ the manager yesterday?",["was","did","were"],"مع be في الماضي والفاعل مفرد: was."],
+     ["Who ______ the server last night?",["restarted","did restart","did restarted"],"السؤال عن الفاعل، فلا نستخدم did."]]},
+{id:35,b:9,lv:"B1",ar:"الأسئلة الذيلية",en:"Question Tags",
+ f:["Positive sentence + negative tag   It is ready, isn't it?","Negative sentence + positive tag   You don't work here, do you?","Tag = same auxiliary + pronoun"],
+ ex:"سؤال قصير في آخر الجملة للتأكد. نستخدم نفس الفعل المساعد ونعكس الإثبات والنفي.",
+ key:"جملة مثبتة ← ذيل منفي، وجملة منفية ← ذيل مثبت، بنفس المساعد. وإذا ما فيه مساعد نستخدم do / does / did.",
+ fx:[["You are the new nurse, isn't it?","You are the new nurse, aren't you?"],
+     ["She works here, isn't she?","She works here, doesn't she?"],
+     ["He can fix it, can he?","He can fix it, can't he?"],
+     ["They didn't call, didn't they?","They didn't call, did they?"],
+     ["You sent the report, don't you?","You sent the report, didn't you?"],
+     ["The meeting is at 10, is it?","The meeting is at 10, isn't it?"]],
+ qz:[["You have finished the report, ______?",["haven't you","don't you","have you"],"الجملة مثبتة ومساعدها have: haven't you."],
+     ["She doesn't work on Fridays, ______?",["does she","doesn't she","is she"],"الجملة منفية بـ doesn't: الذيل مثبت does she."]]},
+{id:36,b:9,lv:"B1",ar:"الأسئلة غير المباشرة",en:"Indirect Questions",
+ f:["Could you tell me / Do you know + wh-word + Subject + Verb","Yes/No: Do you know if / whether + Subject + Verb","No do / does / did and no inversion after the wh-word"],
+ ex:"سؤال مؤدب يبدأ بعبارة مثل Could you tell me. بعدها يرجع ترتيب الجملة عادياً: فاعل ثم فعل.",
+ key:"بعد Could you tell me / Do you know الترتيب عادي: where the lab is وليس where is the lab. وبدون do / does / did.",
+ fx:[["Could you tell me where is the pharmacy?","Could you tell me where the pharmacy is?"],
+     ["Do you know what time does the clinic open?","Do you know what time the clinic opens?"],
+     ["Can you tell me where did he go?","Can you tell me where he went?"],
+     ["Do you know is the doctor available?",["Do you know if the doctor is available?","Do you know whether the doctor is available?"]],
+     ["I don't know where is my badge.","I don't know where my badge is."],
+     ["Could you tell me how much does it cost?","Could you tell me how much it costs?"]],
+ qz:[["Could you tell me where ______?",["the meeting room is","is the meeting room","does the meeting room"],"ترتيب عادي بعد Could you tell me: فاعل ثم فعل."],
+     ["Do you know ______ the report is ready?",["if","does","what"],"سؤال نعم/لا غير مباشر يبدأ بـ if."]]},
+{id:37,b:1,lv:"A2/B1",ar:"أفعال الحالة",en:"Stative Verbs",
+ f:["know, understand, believe, want, need, like, love, hate, have (own), belong, seem","Not used in continuous:   I know (not I am knowing)","Do you understand?   (not Are you understanding?)"],
+ ex:"أفعال تصف حالة أو شعوراً وليس حركة، فلا تأتي في الزمن المستمر حتى لو الكلام عن الآن.",
+ key:"know / want / need / like / understand / have (ملكية) لا تأخذ ‎-ing: I need help now وليس I am needing.",
+ fx:[["I am knowing the answer.","I know the answer."],
+     ["She is wanting a new laptop.","She wants a new laptop."],
+     ["We are needing more staff today.","We need more staff today."],
+     ["Are you understanding the instructions?","Do you understand the instructions?"],
+     ["He is having two phones.","He has two phones."],
+     ["This badge is belonging to Dr. Ali.","This badge belongs to Dr. Ali."]],
+ qz:[["I ______ what you mean now.",["understand","am understanding","understanding"],"understand فعل حالة، لا يأتي مستمراً."],
+     ["This software ______ to the IT department.",["belongs","is belonging","belonging"],"belong فعل حالة: belongs."]]},
+{id:38,b:2,lv:"B1",ar:"just / already / yet / still",en:"just / already / yet / still",
+ f:["have/has + just / already + V3   I have just finished.","haven't/hasn't + V3 + yet   She hasn't replied yet.","Have you + V3 + yet?  |  I still haven't received it."],
+ ex:"just لشيء حدث قبل لحظات، already لشيء تم قبل المتوقع، yet في النفي والسؤال وتأتي آخر الجملة، still لشيء لم يتغير.",
+ key:"just و already بين have والتصريف الثالث. yet في آخر الجملة مع النفي والسؤال. still قبل haven't.",
+ fx:[["I have finished just the report.","I have just finished the report."],
+     ["She hasn't replied already.","She hasn't replied yet."],
+     ["I already have sent the file.","I have already sent the file."],
+     ["I haven't still received the invoice.","I still haven't received the invoice."],
+     ["Have you yet checked the results?","Have you checked the results yet?"],
+     ["She has already went home.","She has already gone home."]],
+ qz:[["The technician has ______ left. You missed him by one minute.",["just","yet","still"],"حدث قبل لحظات: just."],
+     ["We haven't received the lab results ______.",["yet","already","just"],"في النفي وآخر الجملة: yet."]]},
+{id:39,b:4,lv:"B1",ar:"both / either / neither",en:"both / either / neither",
+ f:["both A and B + plural verb","either A or B  |  neither A nor B","both of / either of / neither of + the / these / my + plural noun"],
+ ex:"both للاثنين معاً، either لواحد من اثنين، neither لنفي الاثنين. neither معناها منفي فلا نضيف not.",
+ key:"both … and · either … or · neither … nor. ومع neither الفعل مثبت: Neither of them is ready.",
+ fx:[["Both the doctor or the nurse were there.","Both the doctor and the nurse were there."],
+     ["Neither of them doesn't know the password.","Neither of them knows the password."],
+     ["You can either call and send an email.","You can either call or send an email."],
+     ["Neither the printer or the scanner works.","Neither the printer nor the scanner works."],
+     ["Both of my colleague are on leave.","Both of my colleagues are on leave."],
+     ["I don't like neither option.",["I don't like either option.","I like neither option."]]],
+ qz:[["______ of the two servers is working. We need a technician.",["Neither","Both","Either"],"ولا واحد يشتغل: Neither."],
+     ["______ Dr. Ali and Dr. Sara attended the conference.",["Both","Either","Neither"],"الاثنان معاً مع and: Both."]]},
+{id:40,b:5,lv:"B1",ar:"so و such",en:"so / such",
+ f:["so + adjective / adverb   so busy, so quickly","such + (a/an) + adjective + noun   such a busy day","so / such ... that + result"],
+ ex:"للتأكيد والمبالغة. so قبل الصفة أو الظرف وحدها، و such قبل صفة معها اسم.",
+ key:"so + صفة · such + (a/an) صفة + اسم. إذا فيه اسم بعد الصفة فهي such.",
+ fx:[["It was a so long meeting.","It was such a long meeting."],
+     ["The system is such slow today.","The system is so slow today."],
+     ["She is so a good doctor.","She is such a good doctor."],
+     ["It was so busy day that I forgot lunch.","It was such a busy day that I forgot lunch."],
+     ["He speaks such quickly.","He speaks so quickly."],
+     ["They are so nice people.","They are such nice people."]],
+ qz:[["The training was ______ useful that we asked for another session.",["so","such","such a"],"بعدها صفة فقط بدون اسم: so."],
+     ["It was ______ difficult case that three doctors were called.",["such a","so","such"],"صفة مع اسم مفرد: such a."]]},
+{id:41,b:6,lv:"B1",ar:"فعل + شخص + to",en:"Verb + object + to",
+ f:["want / ask / tell / need / expect + person + to + Verb","Negative: tell + person + not to + Verb","Not: want that + person + verb"],
+ ex:"حين تريد من شخص آخر أن يفعل شيئاً: الفعل، ثم الشخص، ثم to، ثم الفعل بأصله.",
+ key:"I want you to come وليس I want that you come. وبعد الفعل ضمير مفعول (him / her / them) ثم to.",
+ fx:[["I want that you send the report today.","I want you to send the report today."],
+     ["The manager asked me send the file.","The manager asked me to send the file."],
+     ["She told to me to wait outside.","She told me to wait outside."],
+     ["The doctor wants she to rest.","The doctor wants her to rest."],
+     ["He told us don't touch the device.","He told us not to touch the device."],
+     ["We need that the technician checks the server.","We need the technician to check the server."]],
+ qz:[["The supervisor wants ______ the form before noon.",["us to sign","that we sign","us sign"],"want + شخص + to + فعل."],
+     ["I asked the nurse ______ the patient's file.",["to bring","bring","bringing"],"ask + شخص + to + فعل."]]},
+{id:42,b:6,lv:"B1",ar:"الأفعال المركبة",en:"Phrasal Verbs",
+ f:["Verb + particle = new meaning:   turn on, fill in, look for, set up, log in, find out, give up","With a noun:   turn on the screen  /  turn the screen on","With a pronoun the particle goes last:   turn it on"],
+ ex:"فعل مع حرف يعطيان معنى جديداً. ومع الضمير (it / them / me) يأتي الضمير في الوسط.",
+ key:"الضمير في الوسط: turn it on وليس turn on it. و look for = يبحث عن، look at = ينظر إلى، fill in = يعبّي.",
+ fx:[["The screen is off. Please turn on it.","The screen is off. Please turn it on."],
+     ["I am looking my keys.","I am looking for my keys."],
+     ["Here is the form. Please fill in it.",["Here is the form. Please fill it in.","Here is the form. Please fill it out."]],
+     ["Can you pick up me at 5?","Can you pick me up at 5?"],
+     ["I need to log to the system.",["I need to log in to the system.","I need to log into the system.","I need to log on to the system."]],
+     ["She gave up to smoke.","She gave up smoking."]],
+ qz:[["The alarm is too loud. Can you ______?",["turn it off","turn off it","turn it of"],"الضمير في الوسط: turn it off."],
+     ["I'm ______ the patient's file. Have you seen it?",["looking for","looking at","looking after"],"البحث عن شيء: look for."]]},
+{id:43,b:7,lv:"B1",ar:"جمل الزمن المستقبلية و unless",en:"Future Time Clauses & unless",
+ f:["when / as soon as / before / after / until + Present Simple, will + Verb","unless = if ... not   Unless you hurry, you will be late.","No will after when / as soon as / until / unless"],
+ ex:"بعد أدوات الزمن (when, as soon as, before, after, until) نستخدم المضارع البسيط حتى لو المعنى مستقبل. و unless تعني «إلا إذا» وفعلها مثبت.",
+ key:"لا will بعد when / as soon as / until / unless. و unless معناها منفي أصلاً فلا تضف not.",
+ fx:[["I will call you when I will arrive.","I will call you when I arrive."],
+     ["As soon as the results will be ready, we will inform you.","As soon as the results are ready, we will inform you."],
+     ["Unless you don't hurry, you will miss the meeting.","Unless you hurry, you will miss the meeting."],
+     ["We will wait until the doctor will come.","We will wait until the doctor comes."],
+     ["Before you will leave, please sign the form.","Before you leave, please sign the form."],
+     ["I won't start unless you will tell me.","I won't start unless you tell me."]],
+ qz:[["I will send the report as soon as I ______ it.",["finish","will finish","finished"],"بعد as soon as مضارع بسيط: finish."],
+     ["You can't enter the lab ______ you wear a badge.",["unless","if","when"],"إلا إذا لبست البطاقة: unless."]]}
+];
+/* ترتيب العرض داخل كل فرع */
+const ORDER=[29,30,31,32,33, 34,35,36, 1,2,37,3,4,5, 6,38,7,8,9,10, 11,12,13,14, 15,16,17,39,18, 19,20,40,21,22, 23,41,24,25,26,27,42, 28,43];
+TOPICS.sort((x,y)=>ORDER.indexOf(x.id)-ORDER.indexOf(y.id));
+
+/* ---------- أدوات ---------- */
+const $=(s,r)=>(r||document).querySelector(s);
+const $$=(s,r)=>Array.from((r||document).querySelectorAll(s));
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const today=()=>Math.floor((Date.now()-new Date().getTimezoneOffset()*60000)/864e5);
+const IV=[0,1,3,7,21];           /* أيام الانتظار بعد كل إجابة صحيحة */
+const WIDE=window.matchMedia('(min-width: 920px)');
+
+function itemsOf(tp){
+  const a=[{id:'t'+tp.id+'k',t:tp,kind:'k',i:0}];
+  tp.fx.forEach((_,i)=>a.push({id:'t'+tp.id+'f'+i,t:tp,kind:'f',i:i}));
+  tp.qz.forEach((_,i)=>a.push({id:'t'+tp.id+'q'+i,t:tp,kind:'q',i:i}));
+  return a;
+}
+const ALL=TOPICS.reduce((a,tp)=>a.concat(itemsOf(tp)),[]);
+
+/* ---------- الحفظ ---------- */
+const KEY='grammar_map_v2';
+let S={items:{},sound:true,updatedAt:0};
+function loadLocal(){
+  try{const raw=localStorage.getItem(KEY);if(raw){const o=JSON.parse(raw);if(o&&typeof o==='object'&&o.items)S=Object.assign(S,o);}}catch(e){}
+}
+function save(){
+  S.updatedAt=Date.now();
+  try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}
+  cloudPush();
+}
+let cloudRef=null,cloudBusy=false,cloudDirty=false,cloudTimer=0;
+function cloudPush(){
+  if(!cloudRef)return;
+  clearTimeout(cloudTimer);
+  cloudTimer=setTimeout(async function run(){
+    if(cloudBusy){cloudDirty=true;return;}
+    cloudBusy=true;
+    try{await cloudRef.set(JSON.parse(JSON.stringify({items:S.items,sound:S.sound,updatedAt:S.updatedAt})));}
+    catch(e){if(e&&e.code==='invalid_argument'){cloudRef=null;$('#sync').textContent='التقدّم محفوظ على هذا الجهاز.';}}
+    cloudBusy=false;
+    if(cloudDirty&&cloudRef){cloudDirty=false;run();}
+  },1500);
+}
+async function cloudInit(){
+  try{
+    if(!window.claude||typeof window.claude.use!=='function')return;
+    const res=await Promise.all([window.claude.use('db'),window.claude.use('user')]);
+    const db=res[0],user=res[1];
+    if(!db||!user)return;
+    const id=await user.id();
+    if(!id)return;
+    const ref=db.doc('data/users/'+id+'/progress');
+    const snap=await ref.get();
+    cloudRef=ref;
+    $('#sync').textContent='التقدّم محفوظ في حسابك ويظهر على كل أجهزتك.';
+    const remote=snap&&snap.exists?snap.data():null;
+    if(remote&&remote.items&&(remote.updatedAt||0)>(S.updatedAt||0)){
+      S=Object.assign(S,JSON.parse(JSON.stringify(remote)));
+      try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}
+      renderAll();
+    }else if(S.updatedAt&&(!remote||(remote.updatedAt||0)<S.updatedAt)){
+      cloudPush();
+    }
+  }catch(e){}
+}
+
+/* ---------- التقدّم ---------- */
+function grade(id,ok){
+  const t=today();let r=S.items[id];const fresh=!r;
+  if(!r)r=S.items[id]={b:0,d:t,r:0,w:0};
+  if(ok){r.r++;if(fresh||r.d<=t){r.b=Math.min(r.b+1,4);r.d=t+IV[r.b];}}
+  else{r.w++;r.b=0;r.d=t;}
+  save();
+}
+function stat(tp){
+  const t=today(),its=itemsOf(tp);let sum=0,seen=0,due=0,wrong=0,all=true;
+  its.forEach(it=>{const r=S.items[it.id];
+    if(r){seen++;sum+=Math.min(r.b,3);if(r.d<=t)due++;wrong+=r.w;if(r.b<3)all=false;}else all=false;});
+  return {pct:sum/(3*its.length),seen:seen,due:due,wrong:wrong,n:its.length,
+          state:all?'mastered':seen===0?'new':due>0?'due':'learning'};
+}
+function totals(){
+  const t=today();let mastered=0,due=0,active=0,seen=0;
+  TOPICS.forEach(tp=>{if(stat(tp).state==='mastered')mastered++;});
+  ALL.forEach(it=>{const r=S.items[it.id];if(r){seen++;if(r.d<=t)due++;if(r.b===0&&r.w>0)active++;}});
+  return {mastered:mastered,due:due,active:active,seen:seen};
+}
+
+/* ---------- الصوت ---------- */
+let actx=null;
+function beep(kind){
+  if(!S.sound)return;
+  try{
+    const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+    if(!actx)actx=new AC();
+    if(actx.state==='suspended')actx.resume();
+    const now=actx.currentTime;
+    const tone=(f,at,dur,type,vol)=>{const o=actx.createOscillator(),g=actx.createGain();o.connect(g);g.connect(actx.destination);
+      o.type=type;o.frequency.setValueAtTime(f,now+at);g.gain.setValueAtTime(vol,now+at);g.gain.exponentialRampToValueAtTime(0.01,now+at+dur);o.start(now+at);o.stop(now+at+dur);};
+    if(kind==='ok'){tone(523,0,.12,'sine',.18);tone(784,.1,.18,'sine',.18);}
+    else if(kind==='bad'){tone(200,0,.22,'triangle',.16);}
+    else if(kind==='done'){[523,659,784,1047].forEach((f,i)=>tone(f,i*.08,.22,'triangle',.16));}
+  }catch(e){}
+}
+
+/* ---------- الخريطة ---------- */
+let filter='all',query='',view='map';
+const collapsed=new Set();
+
+function ring(pct,state,due){
+  const C=2*Math.PI*15;
+  return '<svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="trk" cx="18" cy="18" r="15"/>'+
+    '<circle class="prg" cx="18" cy="18" r="15" stroke-dasharray="'+(pct*C).toFixed(1)+' '+C.toFixed(1)+'" transform="rotate(-90 18 18)"/>'+
+    (state==='mastered'?'<path class="chk" d="M11.5 18.5l4.2 4.2 8.8-9"/>':'')+
+    (due?'<circle class="duedot" cx="29" cy="7" r="5"/>':'')+'</svg>';
+}
+const STATE_AR={new:'جديد',learning:'قيد التعلّم',due:'عليه مراجعة',mastered:'متقن'};
+function matches(tp,st){
+  const f=filter==='all'||(filter==='A2'&&tp.lv.indexOf('A2')>-1)||(filter==='B1'&&tp.lv.indexOf('B1')>-1)||
+          (filter==='due'&&st.due>0)||(filter==='mastered'&&st.state==='mastered');
+  if(!f)return false;
+  if(!query)return true;
+  return (tp.ar+' '+tp.en+' '+tp.ex+' '+tp.key+' '+tp.f.join(' ')).toLowerCase().indexOf(query)>-1;
+}
+function renderMap(){
+  const tt=totals();
+  $('#root').innerHTML='<span class="r-title">قواعد الإنجليزية</span><span class="r-level">A2 → B1</span><span class="r-count"><bdi dir="ltr">'+tt.mastered+' / '+TOPICS.length+'</bdi> متقن</span>';
+  const A=$('#side-a'),B=$('#side-b');A.innerHTML='';B.innerHTML='';
+  BRANCHES.forEach((br,i)=>{
+    const tps=TOPICS.filter(t=>t.b===br.id);
+    let m=0;
+    const leaves=tps.map(tp=>{
+      const st=stat(tp);if(st.state==='mastered')m++;
+      const dim=!matches(tp,st);
+      return '<button type="button" class="leaf st-'+st.state+(dim?' dim':'')+'" data-act="open-topic" data-t="'+tp.id+'" aria-label="'+esc(tp.en+'، '+tp.ar+'، '+STATE_AR[st.state])+'">'+
+        ring(st.pct,st.state,st.due>0)+
+        '<span class="leaf-txt"><span class="en" dir="ltr">'+esc(tp.en)+'</span><span class="ar">'+esc(tp.ar)+'</span></span>'+
+        '<span class="lv">'+esc(tp.lv)+'</span></button>';
+    }).join('');
+    const el=document.createElement('section');
+    el.className='branch'+(collapsed.has(br.id)?' collapsed':'');
+    el.style.setProperty('--bc',br.color);
+    el.dataset.color=br.color;
+    el.innerHTML='<button type="button" class="bnode" data-act="toggle-branch" data-b="'+br.id+'" aria-expanded="'+(!collapsed.has(br.id))+'">'+
+      '<span class="num">'+(i+1)+'</span><span class="b-ar">'+esc(br.ar)+'</span><span class="b-en en" dir="ltr">'+esc(br.en)+'</span>'+
+      '<span class="b-count">'+m+' / '+tps.length+'</span></button><div class="leaves">'+leaves+'</div>';
+    (i<4?A:B).appendChild(el);
+  });
+  queueWires();
+}
+let wireRaf=0;
+function queueWires(){cancelAnimationFrame(wireRaf);wireRaf=requestAnimationFrame(drawWires);}
+function drawWires(){
+  const map=$('#map'),svg=$('#wires');
+  if(!map||!map.offsetParent)return;
+  const mr=map.getBoundingClientRect();
+  if(!mr.width)return;
+  svg.setAttribute('width',mr.width);svg.setAttribute('height',mr.height);
+  svg.setAttribute('viewBox','0 0 '+mr.width+' '+mr.height);
+  const box=el=>{const r=el.getBoundingClientRect();return {l:r.left-mr.left,r:r.right-mr.left,t:r.top-mr.top,b:r.bottom-mr.top,cx:(r.left+r.right)/2-mr.left,cy:(r.top+r.bottom)/2-mr.top};};
+  const hlink=(a,b)=>{let sx,ex;if(b.cx<a.cx){sx=a.l;ex=b.r;}else{sx=a.r;ex=b.l;}const mx=(sx+ex)/2;
+    return 'M'+sx.toFixed(1)+' '+a.cy.toFixed(1)+' C'+mx.toFixed(1)+' '+a.cy.toFixed(1)+' '+mx.toFixed(1)+' '+b.cy.toFixed(1)+' '+ex.toFixed(1)+' '+b.cy.toFixed(1);};
+  let h='';
+  const path=(d,color,w,op)=>{h+='<path d="'+d+'" fill="none" stroke-linecap="round" stroke-width="'+w+'" opacity="'+op+'" style="stroke:'+color+'"/>';};
+  const wide=WIDE.matches,root=box($('#root'));
+  let prev=root;
+  $$('.branch',map).forEach(br=>{
+    const color=br.dataset.color,bn=box($('.bnode',br));
+    if(wide)path(hlink(root,bn),color,3,.8);
+    else{path('M'+bn.cx.toFixed(1)+' '+prev.b.toFixed(1)+' L'+bn.cx.toFixed(1)+' '+bn.t.toFixed(1),color,3,.8);prev=bn;}
+    if(!br.classList.contains('collapsed'))$$('.leaf',br).forEach(lf=>{
+      path(hlink(bn,box(lf)),lf.classList.contains('st-mastered')?'var(--ok)':color,2,lf.classList.contains('dim')?.15:.6);
+    });
+  });
+  svg.innerHTML=h;
+}
+
+/* ---------- الرأس ---------- */
+function renderHead(){
+  const tt=totals();
+  $('#stats').innerHTML=
+    '<div class="stat s-ok"><b>'+tt.mastered+' / '+TOPICS.length+'</b><span>قاعدة متقنة</span></div>'+
+    '<div class="stat s-due"><b>'+tt.due+'</b><span>للمراجعة اليوم</span></div>'+
+    '<div class="stat s-bad"><b>'+tt.active+'</b><span>خطأ ما اختفى</span></div>';
+  let h;
+  if(tt.due>0){
+    h='<button type="button" class="btn primary" data-act="review">راجع اليوم ('+Math.min(tt.due,20)+')</button>'+
+      '<button type="button" class="btn" data-act="mixed">تدريب مختلط</button>';
+  }else{
+    h='<button type="button" class="btn primary" data-act="mixed">'+(tt.seen?'تدريب مختلط (10)':'ابدأ أول تدريب (10 بطاقات)')+'</button>';
+  }
+  $('#actions').innerHTML=h;
+  $('#btn-sound').textContent='الصوت: '+(S.sound?'شغّال':'مقفّل');
+}
+
+/* ---------- أخطائي ---------- */
+function renderErrors(){
+  const rows=TOPICS.map(tp=>({tp:tp,w:stat(tp).wrong})).filter(x=>x.w>0).sort((a,b)=>b.w-a.w);
+  const active=ALL.filter(it=>{const r=S.items[it.id];return r&&r.b===0&&r.w>0;});
+  let h='<h2>وين تغلط أكثر</h2><p class="sub">عدد مرات الخطأ في كل قاعدة. اضغط القاعدة لمراجعتها.</p>';
+  if(!rows.length){
+    h+='<div class="empty">ما سجّلت أخطاء للحين. ابدأ تدريب من الأعلى، وكل جملة تغلط فيها تنحسب هنا تحت قاعدتها.</div>';
+  }else{
+    const max=rows[0].w;
+    h+=rows.map(x=>'<button type="button" class="err-row" data-act="open-topic" data-t="'+x.tp.id+'">'+
+      '<span class="nm"><span class="en" dir="ltr">'+esc(x.tp.en)+'</span></span>'+
+      '<span class="track"><i style="width:'+Math.max(6,Math.round(x.w/max*100))+'%"></i></span>'+
+      '<span class="n">'+x.w+'</span></button>').join('');
+  }
+  h+='<h3>أخطاء ما اختفت ('+active.length+')</h3>';
+  if(!active.length){
+    h+='<div class="empty">ما فيه أخطاء نشطة. الخطأ يطلع من هنا لما تصححه صح.</div>';
+  }else{
+    h+='<div class="row" style="margin-bottom:10px"><button type="button" class="btn primary" data-act="drill-active">درّب عليها الآن ('+Math.min(active.length,20)+')</button></div>';
+    h+=active.map(it=>{
+      const r=S.items[it.id];
+      const text=it.kind==='f'?it.t.fx[it.i][0]:it.kind==='q'?it.t.qz[it.i][0]:'Rule card: '+it.t.en;
+      return '<div class="act-item"><p class="sent" dir="ltr">'+esc(text)+'</p><p class="meta"><span class="en" dir="ltr">'+esc(it.t.en)+'</span> · غلطت فيها '+r.w+(r.w===1?' مرة':' مرات')+'</p></div>';
+    }).join('');
+  }
+  $('#view-err').innerHTML=h;
+}
+
+/* ---------- نافذة القاعدة ---------- */
+let sheetTopic=null;
+function formulaHtml(tp){return tp.f.map(v=>v&&v!=='-'?'<div>'+esc(v)+'</div>':'').join('');}
+function pairHtml(p){return '<div class="pair"><p class="sent was" dir="ltr">'+esc(p[0])+'</p><p class="sent now" dir="ltr">'+esc([].concat(p[1])[0])+'</p></div>';}
+function openSheet(id){
+  const tp=TOPICS.find(t=>t.id===id);if(!tp)return;
+  sheetTopic=tp;
+  const br=BRANCHES.find(b=>b.id===tp.b),st=stat(tp);
+  const formula=formulaHtml(tp);
+  const ex=tp.fx.slice(0,2).map(pairHtml).join('');
+  $('#sheet-panel').innerHTML=
+    '<div class="p-head"><div><div class="p-sub">'+esc(br.ar)+' · <span class="en" dir="ltr">'+esc(tp.lv)+'</span> · '+STATE_AR[st.state]+'</div>'+
+      '<h2><span class="en" dir="ltr">'+esc(tp.en)+'</span></h2><div class="p-sub">'+esc(tp.ar)+'</div></div>'+
+      '<button type="button" class="x" data-act="close-sheet" aria-label="إغلاق">✕</button></div>'+
+    '<div class="meter"><span>التقدّم</span><span class="track"><i style="width:'+Math.round(st.pct*100)+'%"></i></span><span class="en" dir="ltr">'+Math.round(st.pct*100)+'%</span></div>'+
+    '<div class="row"><button type="button" class="btn primary" data-act="drill-topic">احفظها ودرّبها ('+st.n+' بطاقات)</button></div>'+
+    '<div class="box"><h4>الشرح</h4><p>'+esc(tp.ex)+'</p></div>'+
+    '<div class="box"><h4>الصيغة</h4><div class="formula">'+formula+'</div></div>'+
+    '<div class="box key"><h4>المفتاح</h4><p>'+esc(tp.key)+'</p></div>'+
+    '<div class="box"><h4>'+(tp.id>28?'أخطاء شائعة':'من أخطائك')+'</h4>'+ex+'</div>'+
+    '<div class="row">'+
+      (st.state==='mastered'?'':'<button type="button" class="btn small" data-act="mark-known">أعرفها، علّمها متقنة</button>')+
+      (st.seen?'<button type="button" class="btn small ghost" data-act="reset-topic">صفّر تقدّم القاعدة</button>':'')+
+    '</div>';
+  showOverlay('#sheet');
+}
+function showOverlay(sel){$(sel).hidden=false;document.documentElement.classList.add('lock');const p=$('.panel',$(sel));p.scrollTop=0;const x=$('.x',p);if(x)x.focus({preventScroll:true});}
+function hideOverlay(sel){$(sel).hidden=true;if($('#sheet').hidden&&$('#drill').hidden)document.documentElement.classList.remove('lock');}
+
+/* ---------- التدريب ---------- */
+let D=null;
+function startDrill(title,items){
+  if(!items.length)return;
+  D={title:title,queue:items.map(it=>Object.assign({},it)),pos:0,first:0,firstOk:0,missed:[],answered:false,pending:null};
+  hideOverlay('#sheet');
+  showOverlay('#drill');
+  renderDrill();
+}
+function pickMixed(n){
+  const t=today(),perTopic={};
+  const scored=ALL.map(it=>{const r=S.items[it.id];
+    let s;if(!r)s=2+Math.random();else if(r.d<=t)s=4+(r.w>0?1:0)+Math.random();else s=Math.random()*.5;
+    return {it:it,s:s};}).sort((a,b)=>b.s-a.s);
+  const out=[];
+  for(const x of scored){const k=x.it.t.id;perTopic[k]=perTopic[k]||0;if(perTopic[k]>=2)continue;perTopic[k]++;out.push(x.it);if(out.length>=n)break;}
+  return shuffle(out);
+}
+function norm(s,strict){
+  s=String(s).replace(/[‘’ʼ]/g,"'").replace(/[“”]/g,'"').replace(/\s+/g,' ').trim();
+  if(strict)return s;
+  s=s.toLowerCase()
+    .replace(/\bcan't\b/g,'can not').replace(/\bcannot\b/g,'can not').replace(/\bwon't\b/g,'will not')
+    .replace(/n't\b/g,' not').replace(/\bi'm\b/g,'i am').replace(/'re\b/g,' are').replace(/'ve\b/g,' have').replace(/'ll\b/g,' will')
+    .replace(/\b(it|he|she|that|there|what|who|where|here)'s\b/g,'$1 is').replace(/'d\b/g,' would');
+  return s.replace(/[.,!?;:"]/g,' ').replace(/\s+/g,' ').trim();
+}
+function diffWords(a,b){
+  const n=a.length,m=b.length,L=[];
+  for(let i=0;i<=n;i++){L.push(new Array(m+1).fill(0));}
+  for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)L[i][j]=a[i]===b[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
+  const ra=[],rb=[];let i=0,j=0;
+  while(i<n&&j<m){
+    if(a[i]===b[j]){ra.push([a[i],0]);rb.push([b[j],0]);i++;j++;}
+    else if(L[i+1][j]>=L[i][j+1]){ra.push([a[i],1]);i++;}
+    else{rb.push([b[j],1]);j++;}
+  }
+  while(i<n)ra.push([a[i++],1]);
+  while(j<m)rb.push([b[j++],1]);
+  return [ra,rb];
+}
+const cur=()=>D.queue[D.pos];
+function drillTop(){
+  const total=D.queue.length,done=Math.min(D.pos,total);
+  return '<div class="d-top"><span class="d-title">'+esc(D.title)+'</span><span class="d-count">'+Math.min(D.pos+1,total)+' / '+total+'</span>'+
+    '<button type="button" class="x" data-act="close-drill" aria-label="إنهاء التدريب">✕</button></div>'+
+    '<div class="d-bar"><i style="width:'+Math.round(done/total*100)+'%"></i></div>';
+}
+function renderDrill(){
+  const P=$('#drill-panel');
+  if(D.pos>=D.queue.length){renderSummary();return;}
+  const it=cur(),tp=it.t;D.answered=false;D.pending=null;
+  let h=drillTop();
+  if(it.kind==='f'){
+    const bad=tp.fx[it.i][0];
+    h+='<p class="kicker">في الجملة خطأ. صحّحه بالكتابة'+(it.again?' (محاولة ثانية)':'')+'</p>'+
+       '<p class="badline">'+esc(bad)+'</p>'+
+       '<textarea id="ans" rows="3" dir="ltr" lang="en" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" aria-label="اكتب الجملة الصحيحة">'+esc(bad)+'</textarea>'+
+       '<p class="hint" id="hint">'+(tp.strict?'هنا النقطة والمسافة والحرف الكبير محسوبة.':'')+'</p>'+
+       '<div id="fb"></div>'+
+       '<div class="row" id="d-actions"><button type="button" class="btn primary" data-act="check">تحقق</button><button type="button" class="btn ghost" data-act="reveal">ما أعرف، ورّني</button></div>';
+  }else if(it.kind==='k'){
+    h+='<p class="kicker">تذكّر القاعدة'+(it.again?' (محاولة ثانية)':'')+'</p>'+
+       '<div class="kcard"><p class="k-en en" dir="ltr">'+esc(tp.en)+'</p><p class="k-ar">'+esc(tp.ar)+'</p></div>'+
+       '<p class="kicker" style="font-weight:400">قل المفتاح والصيغة من ذاكرتك، ثم اكشف وقارن.</p>'+
+       '<div id="fb"></div>'+
+       '<div class="row" id="d-actions"><button type="button" class="btn primary" data-act="k-show">اكشف القاعدة</button></div>';
+  }else{
+    const q=tp.qz[it.i];
+    if(!it.order)it.order=shuffle(q[1].map((_,k)=>k));
+    h+='<p class="kicker">اختر الكلمة الصحيحة'+(it.again?' (محاولة ثانية)':'')+'</p>'+
+       '<p class="q">'+esc(q[0])+'</p>'+
+       '<div class="opts">'+it.order.map(o=>'<button type="button" class="opt" data-act="opt" data-o="'+o+'">'+esc(q[1][o])+'</button>').join('')+'</div>'+
+       '<div id="fb"></div><div class="row" id="d-actions"></div>';
+  }
+  P.innerHTML=h;P.scrollTop=0;
+  const ans=$('#ans');
+  if(ans&&window.matchMedia('(pointer: fine)').matches){ans.focus();ans.setSelectionRange(ans.value.length,ans.value.length);}
+}
+function ruleLine(tp){return '<p class="rule"><b class="en" dir="ltr">'+esc(tp.en)+'</b><span class="sep"> · </span>'+esc(tp.key)+'</p>';}
+function fixFeedback(ok,val,revealed){
+  const it=cur(),tp=it.t,pair=tp.fx[it.i],bad=pair[0],goods=[].concat(pair[1]);
+  D.answered=true;D.pending=ok;
+  const d=diffWords(bad.split(' '),goods[0].split(' '));
+  const line=(arr,tag)=>arr.map(x=>x[1]?'<'+tag+'>'+esc(x[0])+'</'+tag+'>':esc(x[0])).join(' ');
+  let h='<div class="fb '+(ok?'good':'bad')+'" role="status"><p class="fb-title">'+(ok?'صحيح':revealed?'هذا التصحيح':'مو صحيح')+'</p>';
+  if(!ok&&!revealed)h+='<p class="fb-label">كتبت</p><p class="sent" dir="ltr">'+esc(val)+'</p>';
+  h+='<p class="fb-label">الخطأ ثم التصحيح</p><p class="sent was" dir="ltr">'+line(d[0],'del')+'</p><p class="sent now" dir="ltr">'+line(d[1],'ins')+'</p>';
+  if(goods.length>1)h+='<p class="fb-label">ومقبول أيضاً</p>'+goods.slice(1).map(g=>'<p class="sent" dir="ltr">'+esc(g)+'</p>').join('');
+  h+=ruleLine(tp)+'</div>';
+  $('#fb').innerHTML=h;
+  $('#ans').disabled=true;$('#hint').textContent='';
+  $('#d-actions').innerHTML='<button type="button" class="btn primary" data-act="next">التالي</button>'+
+    (!ok&&!revealed?'<button type="button" class="btn ghost" data-act="override">إجابتي صحيحة، احسبها</button>':'');
+  beep(ok?'ok':'bad');
+  $('[data-act="next"]').focus({preventScroll:true});
+  $('#fb').scrollIntoView({block:'nearest'});
+}
+function keyReveal(){
+  if(!D||D.answered)return;
+  const it=cur(),tp=it.t;if(it.kind!=='k')return;
+  $('#fb').innerHTML='<div class="kstack"><div class="box key"><h4>المفتاح</h4><p>'+esc(tp.key)+'</p></div>'+
+    '<div class="box"><h4>الصيغة</h4><div class="formula">'+formulaHtml(tp)+'</div></div>'+
+    '<div class="box"><h4>مثال</h4>'+pairHtml(tp.fx[0])+'</div></div>';
+  $('#d-actions').innerHTML='<button type="button" class="btn primary" data-act="k-yes">حافظها</button><button type="button" class="btn" data-act="k-no">لسا ما حفظتها</button>';
+  $('#fb').scrollIntoView({block:'nearest'});
+}
+function keyAnswer(ok){
+  if(!D||D.answered||cur().kind!=='k')return;
+  D.answered=true;D.pending=ok;if(ok)beep('ok');nextItem();
+}
+function checkFix(){
+  if(!D||D.answered)return;
+  const it=cur();if(it.kind!=='f')return;
+  const tp=it.t,pair=tp.fx[it.i],strict=!!tp.strict,val=$('#ans').value;
+  if(!val.trim())return;
+  if(norm(val,strict)===norm(pair[0],strict)){$('#hint').textContent='ما غيّرت شي. في الجملة خطأ، عدّله ثم اضغط تحقق.';return;}
+  const ok=[].concat(pair[1]).some(g=>norm(g,strict)===norm(val,strict));
+  fixFeedback(ok,val,false);
+}
+function answerOpt(o,btn){
+  if(!D||D.answered)return;
+  const it=cur(),q=it.t.qz[it.i],ok=o===0;
+  D.answered=true;D.pending=ok;
+  $$('.opt',$('#drill-panel')).forEach(b=>{b.disabled=true;if(+b.dataset.o===0)b.classList.add('right');});
+  if(!ok)btn.classList.add('wrong');
+  $('#fb').innerHTML='<div class="fb '+(ok?'good':'bad')+'" role="status"><p class="fb-title">'+(ok?'صحيح':'مو صحيح')+'</p><p style="margin:0;font-size:14px">'+esc(q[2])+'</p>'+ruleLine(it.t)+'</div>';
+  $('#d-actions').innerHTML='<button type="button" class="btn primary" data-act="next">التالي</button>';
+  beep(ok?'ok':'bad');
+  $('[data-act="next"]').focus({preventScroll:true});
+  $('#fb').scrollIntoView({block:'nearest'});
+}
+function commit(){
+  if(!D||!D.answered||D.pending===null)return;
+  const it=cur();
+  grade(it.id,D.pending);
+  if(!it.again){D.first++;if(D.pending)D.firstOk++;else{if(D.missed.indexOf(it.t.id)<0)D.missed.push(it.t.id);D.queue.push(Object.assign({},it,{again:true,order:null}));}}
+  D.answered=false;D.pending=null;
+}
+function nextItem(){if(!D)return;commit();D.pos++;renderDrill();}
+function renderSummary(){
+  const miss=D.missed.map(id=>TOPICS.find(t=>t.id===id));
+  let h='<div class="d-top"><span class="d-title">'+esc(D.title)+'</span><button type="button" class="x" data-act="close-drill" aria-label="إغلاق">✕</button></div>'+
+    '<p class="kicker">خلصت الجلسة. من أول محاولة:</p><p class="sum-score">'+D.firstOk+' / '+D.first+'</p>';
+  if(miss.length){
+    h+='<p class="kicker">قواعد غلطت فيها. اضغط للمراجعة:</p><div class="miss">'+
+      miss.map(tp=>'<button type="button" class="btn" style="text-align:right" data-act="open-topic" data-t="'+tp.id+'"><span class="en" dir="ltr">'+esc(tp.en)+'</span> · '+esc(tp.ar)+'</button>').join('')+'</div>'+
+      '<p class="kicker">الجمل اللي غلطت فيها بترجع لك بكرة في «راجع اليوم».</p>';
+  }else{
+    h+='<p class="kicker">ولا غلطة. الجمل هذي بترجع لك بعد أيام للتأكيد.</p>';
+  }
+  h+='<div class="row"><button type="button" class="btn primary" data-act="close-drill">رجوع للخريطة</button><button type="button" class="btn" data-act="mixed">جلسة ثانية</button></div>';
+  $('#drill-panel').innerHTML=h;
+  beep('done');
+}
+function closeDrill(){
+  if(D&&D.answered)commit();
+  D=null;hideOverlay('#drill');renderAll();
+}
+
+/* ---------- العرض العام ---------- */
+function renderAll(){
+  renderHead();
+  if(view==='map')renderMap();else renderErrors();
+}
+function setView(v){
+  view=v;
+  $('#view-map').hidden=v!=='map';$('#view-err').hidden=v!=='err';$('#map-tools').hidden=v!=='map';
+  $$('[data-act="view"]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v===v)));
+  renderAll();
+}
+
+document.addEventListener('click',e=>{
+  if(e.target.id==='sheet'){hideOverlay('#sheet');return;}
+  const el=e.target.closest('[data-act]');if(!el)return;
+  const act=el.dataset.act;
+  if(act==='open-topic'){if(D){closeDrill();}openSheet(+el.dataset.t);}
+  else if(act==='toggle-branch'){const id=+el.dataset.b;if(collapsed.has(id))collapsed.delete(id);else collapsed.add(id);renderMap();}
+  else if(act==='view')setView(el.dataset.v);
+  else if(act==='filter'){filter=el.dataset.f;$$('[data-act="filter"]').forEach(b=>b.setAttribute('aria-pressed',String(b===el)));renderMap();}
+  else if(act==='review'){const t=today();startDrill('مراجعة اليوم',shuffle(ALL.filter(it=>{const r=S.items[it.id];return r&&r.d<=t;})).slice(0,20));}
+  else if(act==='mixed'){startDrill('تدريب مختلط',pickMixed(10));}
+  else if(act==='drill-active'){startDrill('أخطاء ما اختفت',shuffle(ALL.filter(it=>{const r=S.items[it.id];return r&&r.b===0&&r.w>0;})).slice(0,20));}
+  else if(act==='drill-topic'){if(sheetTopic){const its=itemsOf(sheetTopic);startDrill(sheetTopic.en,[its[0]].concat(shuffle(its.slice(1))));}}
+  else if(act==='mark-known'){if(sheetTopic){const t=today();itemsOf(sheetTopic).forEach(it=>{const r=S.items[it.id]||{r:0,w:0};S.items[it.id]={b:3,d:t+7,r:r.r,w:r.w};});save();beep('done');renderAll();openSheet(sheetTopic.id);}}
+  else if(act==='reset-topic'){if(sheetTopic){itemsOf(sheetTopic).forEach(it=>{delete S.items[it.id];});save();renderAll();openSheet(sheetTopic.id);}}
+  else if(act==='close-sheet')hideOverlay('#sheet');
+  else if(act==='close-drill')closeDrill();
+  else if(act==='check')checkFix();
+  else if(act==='reveal'){if(D&&!D.answered)fixFeedback(false,'',true);}
+  else if(act==='override'){if(D&&D.answered){D.pending=true;el.remove();const f=$('#fb .fb');f.classList.remove('bad');f.classList.add('good');$('.fb-title',f).textContent='انحسبت صحيحة';}}
+  else if(act==='next')nextItem();
+  else if(act==='k-show')keyReveal();
+  else if(act==='k-yes')keyAnswer(true);
+  else if(act==='k-no')keyAnswer(false);
+  else if(act==='opt')answerOpt(+el.dataset.o,el);
+  else if(act==='sound'){S.sound=!S.sound;save();renderHead();if(S.sound)beep('ok');}
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){if(!$('#sheet').hidden)hideOverlay('#sheet');else if(!$('#drill').hidden)closeDrill();return;}
+  if(e.key==='Enter'&&e.target.id==='ans'&&!e.shiftKey){e.preventDefault();checkFix();}
+});
+$('#search').addEventListener('input',e=>{query=e.target.value.toLowerCase().trim();renderMap();});
+if(window.ResizeObserver)new ResizeObserver(queueWires).observe($('#map'));
+window.addEventListener('resize',queueWires);
+if(WIDE.addEventListener)WIDE.addEventListener('change',queueWires);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(queueWires);
+
+loadLocal();
+renderAll();
+cloudInit();
+})();
+</script>
+</body>
+</html>
