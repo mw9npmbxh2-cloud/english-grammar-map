@@ -96,6 +96,7 @@ bdi.en{font-weight:500}
 .btn:active{transform:scale(.97)}
 .btn.primary{background:var(--grad);border:0;color:var(--accent-ink);box-shadow:0 12px 28px -12px var(--a2)}
 .btn.ghost{background:transparent}
+.btn.danger{border-color:var(--bad);color:var(--bad)}
 .btn.small{min-height:44px;padding:8px 16px;font-size:15px;border-radius:13px}
 .btn:disabled{opacity:.5;cursor:default}
 @media (hover:hover){.btn:hover{filter:brightness(1.06)}}
@@ -234,6 +235,7 @@ bdi.en{font-weight:500}
 .err-row .track i{display:block;height:100%;background:var(--bad);border-radius:5px}
 .err-row .n{font-family:var(--font-d);font-size:17px;font-weight:600;font-variant-numeric:tabular-nums;text-align:center}
 .act-item{background:var(--solid);border:1px solid var(--line);border-inline-start:5px solid var(--bad);border-radius:16px;padding:10px 14px}
+.act-item .act-k{margin:0;font-size:17px;line-height:1.5}
 .act-item .meta{font-size:13px;color:var(--muted);margin:2px 0 0}
 
 /* sheets */
@@ -307,6 +309,7 @@ bdi.en{font-weight:500}
 .fb.good{background:var(--ok-bg)} .fb.bad{background:var(--bad-bg)}
 .fb-title{margin:0;font-family:var(--font-d);font-weight:700;font-size:19px}
 .fb.good .fb-title{color:var(--ok)} .fb.bad .fb-title{color:var(--bad)}
+.fb.aside{background:var(--sunken)} .fb.aside .fb-title{color:var(--muted)}
 .fb-label{margin:4px 0 0;font-size:13px;color:var(--muted)}
 .fb .sent{color:var(--ink)} .fb .sent.was{color:var(--bad)} .fb .sent.now{color:var(--ok)}
 .rule{margin:8px 0 0;font-size:15.5px;border-top:1px solid var(--line);padding-top:10px}
@@ -376,7 +379,9 @@ bdi.en{font-weight:500}
 
   <footer class="foot">
     <span id="sync">التقدّم محفوظ على هذا الجهاز.</span>
-    <span>الصيغ هنا صيغ المناهج والاختبارات (Cambridge). بعض ما يُحسب خطأ هنا مقبول في الكلام الأمريكي اليومي.</span>
+    <span>موقع تدريب على قواعد الإنجليزية من <bdi dir="ltr">A2</bdi> إلى <bdi dir="ltr">B1</bdi>. قائمة القواعد تتبع قوائم القواعد في اختباري <bdi dir="ltr">Cambridge A2 Key</bdi> و <bdi dir="ltr">B1 Preliminary</bdi>، ولم يراجع المحتوى معلّم متخصص بعد.</span>
+    <span>بعض ما يُحسب خطأ هنا مقبول في الكلام الأمريكي اليومي.</span>
+    <span>الإصدار <bdi dir="ltr">v1.1</bdi></span>
   </footer>
 </div>
 
@@ -444,7 +449,7 @@ const TOPICS=[
  f:["Subject + was/were + Verb-ing","Subject + was/were not + Verb-ing","Was/Were + Subject + Verb-ing?"],
  ex:"حدث كان مستمراً في الماضي ثم قاطعه حدث آخر.",
  key:"غالباً while مع الماضي المستمر (was/were + ‎-ing)، و when قبل الماضي البسيط.",
- fx:[["I talked on the phone when the power went out.","I was talking on the phone when the power went out."],
+ fx:[["I talking on the phone when the power went out.","I was talking on the phone when the power went out."],
      ["While we reviewing files, the phone rang.","While we were reviewing files, the phone rang."],
      ["She was type the report when the system froze.","She was typing the report when the system froze."],
      ["While the doctor examining the patient, the alarm rang.","While the doctor was examining the patient, the alarm rang."],
@@ -465,7 +470,7 @@ const TOPICS=[
  qz:[["The phone is ringing. - Don't worry, I ______ it!",["will answer","am going to answer","answer"],"قرار لحظي عند سماع الهاتف: will."],
      ["We have already bought the tickets; we ______ London next month.",["are visiting","visiting","visits"],"ترتيب مؤكد في المستقبل: المضارع المستمر كاملاً (are visiting)."]]},
 
-{id:6,b:2,lv:"B1",ar:"المضارع التام البسيط",en:"Present Perfect Simple",
+{id:6,b:2,lv:"A2/B1",ar:"المضارع التام البسيط",en:"Present Perfect Simple",
  f:["Subject + have/has + V3","Subject + have/has not + V3","Have/Has + Subject + V3?"],
  ex:"يربط الماضي بالحاضر: حدث وقع بدون تحديد وقته، أو بدأ في الماضي وما زال مستمراً.",
  key:"since لنقطة البداية (since 2014) و for لطول المدة (for 5 years).",
@@ -512,7 +517,7 @@ const TOPICS=[
      ["She said she had saw the report before.","She said she had seen the report before."],
      ["When we reached the office, the manager already went home.","When we reached the office, the manager had already gone home."]],
  qz:[["By the time the ambulance arrived, the team ______ first aid.",["had provided","provided","has provided"],"الإسعافات تمت قبل وصول الإسعاف، فالأقدم يأخذ had provided."],
-     ["I realized I ______ my ID card at home after I reached the office.",["had left","left","have left"],"نسيان البطاقة وقع قبل الوصول للمكتب: الماضي التام."]]},
+     ["I realized I ______ my ID card at home after I reached the office.",["had left","have left","had leave"],"نسيان البطاقة وقع قبل الوصول للمكتب: الماضي التام had + التصريف الثالث (left)."]]},
 {id:10,b:2,lv:"B1",ar:"الاعتياد في الماضي",en:"Used to",
  f:["Subject + used to + Verb (base)","Subject + did not use to + Verb (base)","Did + Subject + use to + Verb (base)?"],
  ex:"لعادة أو حالة كانت تتكرر في الماضي ثم توقفت الآن.",
@@ -586,7 +591,7 @@ const TOPICS=[
      ["Please close door.","Please close the door."],
      ["I have meeting at 3 PM.","I have a meeting at 3 PM."]],
  qz:[["He is ______ experienced specialist in neurology.",["an","a","the"],"experienced تبدأ بصوت متحرك والاسم مفرد: an."],
-     ["Please print ______ final report on my desk.",["the","a","an"],"التقرير محدد (on my desk): the."]]},
+     ["I saw a doctor yesterday. ______ doctor gave me this prescription.",["The","A","An"],"الطبيب ذُكر في الجملة الأولى، فصار محدداً ومعروفاً: The."]]},
 {id:16,b:4,lv:"A2",ar:"الأسماء غير المعدودة",en:"Uncountable Nouns",
  f:["Uncountable noun + singular verb (no a/an, no plural -s)","Use some / much / a lot of / a piece of","-"],
  ex:"أسماء تُعامل كمفرد دائماً، لا تُجمع ولا تسبقها a/an. أشهرها في العمل: information, advice, equipment, news, progress, research.",
@@ -637,7 +642,7 @@ const TOPICS=[
      ["Today is the most busy day of the week.","Today is the busiest day of the week."],
      ["This report is not as long than the last one.","This report is not as long as the last one."]],
  qz:[["The new diagnostic system is much ______ than the previous version.",["more reliable","reliabler","most reliable"],"reliable صفة طويلة: more reliable than."],
-     ["Dr. Laila is one of the ______ cardiologists in the region.",["best","goodest","better"],"تفضيل good الشاذ: the best."]]},
+     ["Of all the cardiologists in the region, Dr. Laila is the ______.",["best","goodest","most good"],"تفضيل good الشاذ: the best."]]},
 {id:20,b:5,lv:"A2/B1",ar:"الصفات والأظرف وصفات ‎-ed/-ing",en:"Adjectives vs Adverbs, -ed / -ing",
  f:["adjective describes a noun  |  adverb (-ly) describes a verb","-ed = how a person feels  |  -ing = the thing that causes it","-"],
  ex:"الصفة تصف الاسم (fast car) والظرف يصف الفعل (drove quickly). صفات ‎-ed للشخص الذي يشعر (bored) وصفات ‎-ing للشيء المسبب (boring job).",
@@ -679,7 +684,7 @@ const TOPICS=[
 {id:23,b:6,lv:"B1",ar:"الأفعال المتبوعة بـ ‎-ing أو to",en:"Gerunds vs Infinitives",
  f:["+ -ing: enjoy, mind, be busy, spend time, look forward to","+ to + base: decide, hope, need, want, agree","-"],
  ex:"بعض الأفعال والتراكيب يأتي بعدها فعل بـ ‎-ing، وأخرى يأتي بعدها to + الفعل بأصله.",
- key:"look forward to يليه ‎-ing دائماً: look forward to meeting you.",
+ key:"to في look forward to حرف جر. الفعل بعدها يأخذ ‎-ing (look forward to meeting you)، والاسم بعدها صحيح أيضاً (look forward to your reply).",
  fx:[["I was busy to prepare the report.","I was busy preparing the report."],
      ["We decided changing the schedule.","We decided to change the schedule."],
      ["I look forward to hear from you.","I look forward to hearing from you."],
@@ -691,7 +696,7 @@ const TOPICS=[
 {id:24,b:6,lv:"A2/B1",ar:"الشرطية الصفرية والأولى",en:"Conditionals 0 & 1",
  f:["Zero: If + Present Simple, Present Simple (facts)","First: If + Present Simple, will + base (real possibility)","What will happen if...?"],
  ex:"الصفرية للحقائق والنتائج المضمونة. الأولى لموقف واقعي محتمل في المستقبل.",
- key:"فعل جملة if دائماً مضارع بسيط. لا تضع will في شق if.",
+ key:"في النمطين هنا (الصفرية والأولى) فعل شق if مضارع بسيط، و will تأتي في جواب الشرط فقط.",
  fx:[["If you will call him, he will answer.","If you call him, he will answer."],
      ["If you heat ice, it melt.","If you heat ice, it melts."],
      ["If it will rain tomorrow, we will cancel the event.","If it rains tomorrow, we will cancel the event."],
@@ -699,7 +704,7 @@ const TOPICS=[
      ["I call you if I will finish early.","I will call you if I finish early."],
      ["If you press this button, the screen will turns off.",["If you press this button, the screen turns off.","If you press this button, the screen will turn off."]]],
  qz:[["If the patient ______ any adverse reactions, notify the doctor immediately.",["develops","will develop","developed"],"في شق if نضع مضارعاً بسيطاً: develops."],
-     ["We ______ the project on time if all team members cooperate.",["will complete","complete","completed"],"جواب الشرط لموقف مستقبلي محتمل: will complete."]]},
+     ["We ______ the project on time if all team members cooperate.",["will complete","completing","completed"],"جواب الشرط لموقف مستقبلي محتمل: will complete."]]},
 {id:25,b:6,lv:"B1",ar:"الشرطية الثانية",en:"Second Conditional",
  f:["If + Past Simple, would + Verb (base)","If I didn't have..., I would...","What would you do if...?"],
  ex:"لموقف تخيلي غير واقعي أو مستبعد في الحاضر.",
@@ -791,7 +796,7 @@ const TOPICS=[
  ex:"always, usually, often, sometimes, never تأتي قبل الفعل الأساسي وبعد فعل be. وترتيب الجملة ثابت: فاعل، فعل، مفعول، ثم المكان، ثم الزمان.",
  key:"قبل الفعل الأساسي وبعد be: I always check / I am always ready. والمفعول يلصق بالفعل: I like my job very much.",
  fx:[["She arrives always early.","She always arrives early."],
-     ["He never is late.","He is never late."],
+     ["He is late never.","He is never late."],
      ["I like very much my job.","I like my job very much."],
      ["We have every Monday a meeting.",["We have a meeting every Monday.","Every Monday, we have a meeting."]],
      ["Always I check my email in the morning.","I always check my email in the morning."],
@@ -817,11 +822,11 @@ const TOPICS=[
  fx:[["Where you work?","Where do you work?"],
      ["What time the clinic opens?","What time does the clinic open?"],
      ["Why she is late?","Why is she late?"],
-     ["Who did send this email?","Who sent this email?"],
+     ["Who did sent this email?","Who sent this email?"],
      ["How many patients you saw yesterday?","How many patients did you see yesterday?"],
      ["What means this word?","What does this word mean?"]],
  qz:[["Where ______ the manager yesterday?",["was","did","were"],"مع be في الماضي والفاعل مفرد: was."],
-     ["Who ______ the server last night?",["restarted","did restart","did restarted"],"السؤال عن الفاعل، فلا نستخدم did."]]},
+     ["Who ______ the server last night?",["restarted","did restarted","restart"],"السؤال عن الفاعل، فلا نحتاج did، والفعل ماضٍ: restarted."]]},
 {id:35,b:9,lv:"B1",ar:"الأسئلة الذيلية",en:"Question Tags",
  f:["Positive sentence + negative tag   It is ready, isn't it?","Negative sentence + positive tag   You don't work here, do you?","Tag = same auxiliary + pronoun"],
  ex:"سؤال قصير في آخر الجملة للتأكد. نستخدم نفس الفعل المساعد ونعكس الإثبات والنفي.",
@@ -858,7 +863,7 @@ const TOPICS=[
      ["This badge is belonging to Dr. Ali.","This badge belongs to Dr. Ali."]],
  qz:[["I ______ what you mean now.",["understand","am understanding","understanding"],"understand فعل حالة، لا يأتي مستمراً."],
      ["This software ______ to the IT department.",["belongs","is belonging","belonging"],"belong فعل حالة: belongs."]]},
-{id:38,b:2,lv:"B1",ar:"just / already / yet / still",en:"just / already / yet / still",
+{id:38,b:2,lv:"A2/B1",ar:"just / already / yet / still",en:"just / already / yet / still",
  f:["have/has + just / already + V3   I have just finished.","haven't/hasn't + V3 + yet   She hasn't replied yet.","Have you + V3 + yet?  |  I still haven't received it."],
  ex:"just لشيء حدث قبل لحظات، already لشيء تم قبل المتوقع، yet في النفي والسؤال وتأتي آخر الجملة، still لشيء لم يتغير.",
  key:"just و already بين have والتصريف الثالث. yet في آخر الجملة مع النفي والسؤال. still قبل haven't. (الأمريكيون يستخدمون معها الماضي البسيط كثيراً: I already ate.)",
@@ -993,7 +998,7 @@ const TOPICS=[
 {id:49,b:7,lv:"A2/B1",ar:"التعبير عن الهدف",en:"Purpose: to / so that",
  f:["to + Verb (base)   I called to ask a question.","in order to + Verb (formal)   |   so that + Subject + can / will","for + noun   I went for a check-up.   (not for + verb)"],
  ex:"لبيان الهدف من الفعل نستخدم to + الفعل بأصله. و so that بعدها جملة فيها فاعل وفعل. و for يأتي بعدها اسم.",
- key:"الهدف = to + فعل: I came to help. لا تقل for help ولا for to help. و so that + فاعل + can / will.",
+ key:"الهدف = to + فعل. I came to help معناها جئت لأساعد، أما I came for help فمعناها جئت أطلب المساعدة. والخطأ هو for + فعل: for ask أو for to ask. و so that + فاعل + can / will.",
  fx:[["I called for ask about my appointment.","I called to ask about my appointment."],
      ["She went to the pharmacy for buy medicine.","She went to the pharmacy to buy medicine."],
      ["He studies hard for to pass the exam.",["He studies hard to pass the exam.","He studies hard in order to pass the exam."]],
@@ -1043,7 +1048,7 @@ const TOPICS=[
 const ORDER=[29,30,44,31,32,48,33,47, 34,35,36,52, 1,2,37,3,4,5, 6,38,7,8,9,10, 11,46,12,13,14, 15,16,17,39,45,18, 19,20,40,21,22, 23,41,24,25,26,51,27,50,42, 28,49,43];
 TOPICS.sort((x,y)=>ORDER.indexOf(x.id)-ORDER.indexOf(y.id));
 
-/* ---------- تعليل كل جملة (بنفس ترتيب fx) وترجمة أول مثالين في كل قاعدة ---------- */
+/* ---------- تعليل كل جملة وترجمة تصحيحها (الاثنان بنفس ترتيب fx) ---------- */
 const WHY={
 1:["الفاعل He مفرد غائب، فالفعل يأخذ ‎-s: works.",
    "بعد Does يرجع الفعل لأصله: know بدون ‎-s.",
@@ -1063,7 +1068,7 @@ const WHY={
    "بعد Did يرجع الفعل لأصله: check.",
    "بعد didn't يرجع الفعل لأصله: come.",
    "leave فعل شاذ، ماضيه left وليس leaved."],
-4:["المكالمة كانت مستمرة حين انقطعت الكهرباء، فنستخدم was talking.",
+4:["المكالمة كانت مستمرة حين انقطعت الكهرباء، والماضي المستمر يحتاج was قبل talking.",
    "بعد While ناقص were قبل reviewing.",
    "بعد was يأتي الفعل بـ ‎-ing: typing.",
    "ناقص was قبل examining.",
@@ -1076,7 +1081,7 @@ const WHY={
    "بعد going to الفعل بأصله: travel بدون ‎-s.",
    "بعد will not الفعل بأصله: come بدون ‎-s."],
 6:["since 2014 تعني أن العمل مستمر إلى الآن، فنستخدم have worked.",
-   "مع yet نستخدم المضارع التام: has not sent.",
+   "بعد didn't يرجع الفعل لأصله: send. ومع yet الأفضل المضارع التام: has not sent.",
    "بعد has يأتي التصريف الثالث: worked.",
    "بعد have يأتي التصريف الثالث: finished.",
    "two hours مدة وليست نقطة بداية، فنستخدم for.",
@@ -1236,7 +1241,7 @@ const WHY={
    "الأمر بالفعل بأصله بدون ‎-s: Close.",
    "النهي بـ Don't وليس No."],
 32:["ظرف التكرار يأتي قبل الفعل الأساسي: always arrives.",
-   "مع فعل be يأتي الظرف بعده: is never.",
+   "never تأتي بعد فعل be مباشرة وقبل الصفة، وليس في آخر الجملة: is never late.",
    "المفعول يلصق بالفعل، و very much في آخر الجملة.",
    "المفعول (a meeting) بعد الفعل مباشرة، ثم الزمان.",
    "always لا تبدأ الجملة، مكانها قبل الفعل الأساسي.",
@@ -1250,7 +1255,7 @@ const WHY={
 34:["السؤال في المضارع يحتاج do قبل الفاعل.",
    "The clinic مفرد، فنحتاج does والفعل بأصله: open.",
    "في السؤال يتقدم is على الفاعل.",
-   "السؤال عن الفاعل نفسه، فلا نستخدم did، والفعل ماضٍ: sent.",
+   "السؤال عن الفاعل نفسه، فلا نحتاج did، والفعل نفسه يكون ماضياً: sent.",
    "السؤال في الماضي يحتاج did والفعل بأصله: see.",
    "نحتاج does قبل الفاعل، والفعل mean في الآخر."],
 35:["الذيل يطابق الفاعل والمساعد: You are → aren't you.",
@@ -1363,58 +1368,162 @@ const WHY={
    "الجملة في الماضي (went)، فالرد So did I."]
 };
 const TR={
-1:["يعمل في المستشفى كل يوم.","هل تعرف اسم المريض؟"],
-2:["الرجاء الهدوء. الأطباء يناقشون الحالة الآن.","أعمل على تقرير جديد هذا الأسبوع."],
-3:["أمس توقف التطبيق عن العمل فجأة.","لم نستلم البريد الليلة الماضية."],
-4:["كنت أتكلم بالهاتف حين انقطعت الكهرباء.","بينما كنا نراجع الملفات، رنّ الهاتف."],
-5:["انظر إلى الغيوم الداكنة! ستمطر.","سأقابل المدير غداً الساعة 10 صباحاً."],
-6:["أعمل في هذا المستشفى منذ 2014.","فريق المختبر لم يرسل النتائج بعد."],
-7:["رأيت ذلك المريض أمس.","زرت المقر الرئيسي في الرياض عام 2022."],
-8:["أنتظر منذ ساعتين!","هي تذاكر طوال الصباح."],
-9:["حين وصلت، كان الاجتماع قد بدأ.","كان المريض قد غادر حين وصل الطبيب."],
-10:["كنت أعمل في المناوبات الليلية.","لم يكن يحب تقنية المعلومات الطبية."],
-11:["هل تستطيع إرسال الملف؟","أمس لم أستطع الدخول إلى النظام."],
-12:["لا يلزمك الدفع، إنه مجاني.","يُمنع على الموظفين التدخين داخل المستشفى."],
-13:["ينبغي أن تراجع التقرير.","لا ينبغي أن يتجاهل الأعراض."],
-14:["عملت طوال الليل، فلا بد أنها متعبة جداً.","قد تكون نتائج المختبر جاهزة."],
-15:["أحتاج مساعدة في هذه المهمة.","هي طبيبة في المستشفى."],
-16:["أعطاني المدير نصيحة.","اشترينا معدات جديدة."],
-17:["لم يبقَ لدينا وقت كثير.","الغرفة كبيرة بما يكفي."],
-18:["أحد زملائي غائب.","إحدى القواعد الأساسية تتطلب بطاقة هوية."],
-19:["هذا التطبيق أسرع من القديم.","هو أفضل طبيب."],
-20:["يتكلم الإنجليزية بوضوح.","المحاضرة الطويلة جعلتني مرتبكاً."],
-21:["الطبيب الذي عالجني كان متعاوناً.","هذه هي العيادة التي تدربت فيها."],
-22:["فتحت حاسوبي. ثم قرأت رسائلي.","فتحت التطبيق. ثم راجعت الجدول."],
-23:["كنت مشغولاً بإعداد التقرير.","قررنا تغيير الجدول."],
-24:["إذا اتصلت به، سيرد.","إذا سخّنت الثلج، يذوب."],
-25:["لو كان عندي وقت أكثر، لساعدتك.","لو كنت المدير، لغيّرت هذا."],
-26:["أُعدّ التقرير أمس.","الرسائل اليومية يرسلها النظام."],
-27:["قال إنه مشغول، فلم أتصل به ذلك اليوم.","أخبرتني أنها ستتصل لاحقاً، لكنها لم تفعل."],
-28:["مع أنه كان متعباً، عمل.","لأن الخادم تعطّل، أوقفنا العمل."],
-29:["توجد طابعتان في المكتب.","توجد مشكلة في الخادم."],
-30:["الرجاء إرسال التقرير إليّ.","هذا مكتبها."],
-31:["لا تلمس الشاشة.","تفضّل بالجلوس."],
-32:["هي دائماً تصل مبكراً.","هو لا يتأخر أبداً."],
-33:["الاجتماع يوم الاثنين.","أبدأ العمل الساعة 8 صباحاً."],
-34:["أين تعمل؟","متى تفتح العيادة؟"],
-35:["أنتِ الممرضة الجديدة، أليس كذلك؟","هي تعمل هنا، أليس كذلك؟"],
-36:["هل يمكنك إخباري أين الصيدلية؟","هل تعرف متى تفتح العيادة؟"],
-37:["أعرف الإجابة.","تريد حاسوباً محمولاً جديداً."],
-38:["أنهيت التقرير للتو.","لم ترد بعد."],
-39:["كان الطبيب والممرضة كلاهما هناك.","لا أحد منهما يعرف كلمة المرور."],
-40:["كان اجتماعاً طويلاً جداً.","النظام بطيء جداً اليوم."],
-41:["أريدك أن ترسل التقرير اليوم.","طلب مني المدير أن أرسل الملف."],
-42:["الشاشة مطفأة. شغّلها من فضلك.","أبحث عن مفاتيحي."],
-43:["سأتصل بك حين أصل.","حالما تجهز النتائج، سنبلغك."],
-44:["هذا مكتب الطبيب.","استعرت حاسوب أحمد."],
-45:["لم أرَ شيئاً.","الجميع في غرفة الاجتماعات."],
-46:["أود التحدث مع المدير.","هل تود كوباً من الشاي؟"],
-47:["يعتمد ذلك على المدير.","أنا مهتم بهذه الدورة."],
-48:["أعطتني التقرير.","الرجاء إرسال الملف لي."],
-49:["اتصلت لأسأل عن موعدي.","ذهبت إلى الصيدلية لتشتري دواء."],
-50:["سألتني أين أعمل.","سألني هل أتكلم الإنجليزية."],
-51:["أصلح لي الميكانيكي سيارتي.","قِيس لها ضغط دمها."],
-52:["أعمل أيام الأحد. - وأنا كذلك.","لا أجد الملف. - ولا أنا."]
+1:["يعمل في المستشفى كل يوم.","هل تعرف اسم المريض؟",
+   "تغلق الصيدلية الساعة 10 مساءً كل ليلة.","هي لا تعمل أيام الجمعة.",
+   "يرسل النظام تذكيراً كل صباح.","أين يعمل الآن؟"],
+2:["الرجاء الهدوء. الأطباء يناقشون الحالة الآن.","أعمل على تقرير جديد هذا الأسبوع.",
+   "الممرضة تجهّز الغرفة الآن.","ننتظر نتائج المختبر.",
+   "لماذا تتصل بمكتب الدعم التقني؟","هو لا يرد على هاتفه في الوقت الحالي."],
+3:["أمس توقف التطبيق عن العمل فجأة.","لم نستلم البريد الليلة الماضية.",
+   "أرسلت التقرير قبل يومين.","هل راجعت النسخة الاحتياطية أمس؟",
+   "لم تحضر الاجتماع الأسبوع الماضي.","غادر المريض العيادة قبل ساعة."],
+4:["كنت أتكلم بالهاتف حين انقطعت الكهرباء.","بينما كنا نراجع الملفات، رنّ الهاتف.",
+   "كانت تكتب التقرير حين تجمّد النظام.","بينما كان الطبيب يفحص المريض، رنّ جرس الإنذار.",
+   "كانوا ينتظرون في الصالة حين وصلت.","ماذا كنت تفعل الساعة 8 مساء أمس؟"],
+5:["انظر إلى الغيوم الداكنة! ستمطر.","سأقابل المدير غداً الساعة 10 صباحاً.",
+   "سأرسل لك الملف الليلة.","سنثبّت التحديث الأسبوع القادم.",
+   "ستسافر يوم الأحد.","لن يحضر الاجتماع غداً."],
+6:["أعمل في هذا المستشفى منذ 2014.","فريق المختبر لم يرسل النتائج بعد.",
+   "تعمل هنا منذ ثلاث سنوات.","أنهينا التحديث بالفعل.",
+   "أنا هنا منذ ساعتين.","وصل إلى العيادة للتو."],
+7:["رأيت ذلك المريض أمس.","زرت المقر الرئيسي في الرياض عام 2022.",
+   "ثبّتنا النظام الجديد الشهر الماضي.","هذه أول مرة أستخدم فيها هذا البرنامج.",
+   "اتصلت بي قبل ساعة.","متى التحقت بالمستشفى؟"],
+8:["أنتظر منذ ساعتين!","هي تذاكر طوال الصباح.",
+   "نعمل على هذه المشكلة منذ يوم الاثنين.","يعمل هنا منذ 2020.",
+   "أسكن في الرياض منذ 2015.","يختبرون الخادم طوال اليوم."],
+9:["حين وصلت، كان الاجتماع قد بدأ.","كان المريض قد غادر حين وصل الطبيب.",
+   "حين اتصلنا، كانت الصيدلية قد أغلقت.","لم أستطع الدخول لأنني كنت قد نسيت كلمة المرور.",
+   "قالت إنها رأت التقرير من قبل.","حين وصلنا المكتب، كان المدير قد ذهب إلى بيته."],
+10:["كنت أعمل في المناوبات الليلية.","لم يكن يحب تقنية المعلومات الطبية.",
+   "كنا نطبع كل تقرير.","كانت تعمل في قسم الطوارئ.",
+   "هل كان يدير هذه الوحدة؟","كنت أسكن قرب المستشفى."],
+11:["هل تستطيع إرسال الملف؟","أمس لم أستطع الدخول إلى النظام.",
+   "تستطيع التحدث بثلاث لغات.","لم أستطع فتح المرفق.",
+   "لا يستطيع الحضور اليوم.","هل ستتمكن من حضور الاجتماع غداً؟"],
+12:["لا يلزمك الدفع، إنه مجاني.","يُمنع على الموظفين التدخين داخل المستشفى.",
+   "يجب أن تلبس القفازات في المختبر.","عليها أن تنهي التقرير اليوم.",
+   "يُمنع على الزوار لمس المعدات. إنها خطرة.","هل يلزمني توقيع هذا النموذج؟"],
+13:["ينبغي أن تراجع التقرير.","لا ينبغي أن يتجاهل الأعراض.",
+   "ينبغي أن تفحص الكابل أولاً.","ينبغي أن تأخذ استراحة.",
+   "لا ينبغي أن نتشارك كلمات المرور.","ماذا ينبغي أن أفعل الآن؟"],
+14:["عملت طوال الليل، فلا بد أنها متعبة جداً.","قد تكون نتائج المختبر جاهزة.",
+   "قد يأتي متأخراً اليوم.","مستحيل أن يكون هذا صحيحاً.",
+   "قد لا تحضر الاجتماع.","قد يأتي لاحقاً."],
+15:["أحتاج مساعدة في هذه المهمة.","هي طبيبة في المستشفى.",
+   "هو مهندس في قسم تقنية المعلومات.","انتظرت ساعة.",
+   "أغلق الباب من فضلك.","عندي اجتماع الساعة 3 عصراً."],
+16:["أعطاني المدير نصيحة.","اشترينا معدات جديدة.",
+   "أحتاج معلومات أكثر عن المريض.","الأخبار جيدة اليوم.",
+   "أجرت أبحاثاً كثيرة في هذا الموضوع.","أحرزنا تقدماً جيداً هذا الأسبوع."],
+17:["لم يبقَ لدينا وقت كثير.","الغرفة كبيرة بما يكفي.",
+   "كم مريضاً ينتظر؟","يوجد قليل من الماء في القارورة.","لم يبقَ لدينا أي قفازات.",
+   "عندي رسائل أكثر من اللازم للرد عليها.","الصندوق أثقل من أن يُحمل.","ليس كبيراً بما يكفي ليقود السيارة."],
+18:["أحد زملائي غائب.","إحدى القواعد الأساسية تتطلب بطاقة هوية.",
+   "إحدى الطابعات معطلة.","اتصلت بي إحدى الممرضات.",
+   "أحد خوادمنا يحتاج تحديثاً.","أحد أفضل الأطباء في المدينة يعمل هنا."],
+19:["هذا التطبيق أسرع من القديم.","هو أفضل طبيب.",
+   "هذه الغرفة أكبر من مكتبي.","النظام الجديد أفضل من القديم.",
+   "اليوم أكثر أيام الأسبوع ازدحاماً.","هذا التقرير ليس بطول التقرير السابق."],
+20:["يتكلم الإنجليزية بوضوح.","المحاضرة الطويلة جعلتني مرتبكاً.",
+   "تعمل بجد كبير.","أنا مهتم جداً بهذه الدورة.",
+   "كان الاجتماع مملاً جداً.","أدّى العمل جيداً جداً."],
+21:["الطبيب الذي عالجني كان متعاوناً.","هذه هي العيادة التي تدربت فيها.",
+   "الممرضة التي قابلتها كانت لطيفة جداً.","التقرير الذي أرسلته تنقصه صفحة.","هذا هو الطبيب الذي عيادته في الطابق الثاني.",
+   "التطبيق الذي نستخدمه كل يوم بطيء.","مديري، الذي يعمل في الرياض، يزورنا اليوم."],
+22:["فتحت حاسوبي. ثم قرأت رسائلي.","فتحت التطبيق. ثم راجعت الجدول.",
+   "يبدأ الاجتماع الساعة 9 صباحاً.","أنهيت التقرير. أرسلته إلى المدير.",
+   "كان النظام متوقفاً. اتصلنا بالدعم التقني.","وصلت متأخرة. ومع ذلك أنهت عملها في الوقت المحدد."],
+23:["كنت مشغولاً بإعداد التقرير.","قررنا تغيير الجدول.",
+   "أتطلع إلى سماع ردّك.","تستمتع بالعمل مع المرضى.",
+   "نحتاج إلى تحديث البرنامج.","هل تمانع الانتظار بضع دقائق؟"],
+24:["إذا اتصلت به، سيرد.","إذا سخّنت الثلج، يذوب.",
+   "إذا أمطرت غداً، سنلغي الفعالية.","إذا تأخرت، سيغضب المدير.",
+   "سأتصل بك إذا انتهيت مبكراً.","إذا ضغطت هذا الزر، تنطفئ الشاشة."],
+25:["لو كان عندي وقت أكثر، لساعدتك.","لو كنت المدير، لغيّرت هذا.",
+   "لو كانت عندي سيارة، لذهبت بها إلى العمل.","لو كانت تعرف الإجابة، لأخبرتنا.",
+   "ماذا كنت ستفعل لو ربحت مليون ريال؟","لو كنت مكانك، لكلّمت المدير."],
+26:["أُعدّ التقرير أمس.","الرسائل اليومية يرسلها النظام.",
+   "المريض فحصه الدكتور علي.","تُحفظ الملفات على الخادم.","العيادة الجديدة افتتحها الوزير العام الماضي.",
+   "الإنجليزية يُتكلَّم بها في بلدان كثيرة.","النموذج يجب أن يوقّعه الطبيب."],
+27:["قال إنه مشغول، فلم أتصل به ذلك اليوم.","أخبرتني أنها ستتصل لاحقاً، لكنها لم تفعل.",
+   "أخبرتني أن الخادم متوقف.","قال إنه يستطيع إصلاح الطابعة، لكنه لم يستطع.",
+   "قالوا إنهم جاهزون.","قالت الممرضة إن المريض نائم، فرجعنا بعد ساعة."],
+28:["مع أنه كان متعباً، عمل.","لأن الخادم تعطّل، أوقفنا العمل.",
+   "مع أن الوقت كان متأخراً، واصلت العمل.","رغم التأخير، انتهينا في الوقت المحدد.",
+   "تأخرت لأن الزحام كان شديداً.","رغم المطر، فتحت العيادة في موعدها."],
+29:["توجد طابعتان في المكتب.","توجد مشكلة في الخادم.",
+   "هل توجد كراسٍ في غرفة الانتظار؟","توجد صيدلية قرب المستشفى.",
+   "يوجد مرضى كثيرون اليوم.","لا توجد أسرّة متاحة."],
+30:["الرجاء إرسال التقرير إليّ.","هذا مكتبها.",
+   "طلب منهم الطبيب أن ينتظروا.","هذا الحاسوب المحمول لي.",
+   "أصلح الطابعة بنفسه.","غيّر المستشفى شعاره."],
+31:["لا تلمس الشاشة.","تفضّل بالجلوس.",
+   "لا تنسَ بطاقتك.","لنبدأ الاجتماع.",
+   "أغلق الباب من فضلك.","لا تفتح هذا الملف."],
+32:["هي دائماً تصل مبكراً.","هو لا يتأخر أبداً.",
+   "أحب عملي كثيراً.","عندنا اجتماع كل يوم اثنين.",
+   "أراجع بريدي دائماً في الصباح.","أذهب إلى العمل بالسيارة عادةً."],
+33:["الاجتماع يوم الاثنين.","أبدأ العمل الساعة 8 صباحاً.",
+   "التحقت بالمستشفى عام 2019.","سأتصل بك الأسبوع القادم.",
+   "وصل إلى المكتب متأخراً.","أعمل في الليل عادةً."],
+34:["أين تعمل؟","متى تفتح العيادة؟",
+   "لماذا هي متأخرة؟","من أرسل هذا البريد؟",
+   "كم مريضاً رأيت أمس؟","ماذا تعني هذه الكلمة؟"],
+35:["أنتِ الممرضة الجديدة، أليس كذلك؟","هي تعمل هنا، أليس كذلك؟",
+   "يستطيع إصلاحه، أليس كذلك؟","لم يتصلوا، أليس كذلك؟",
+   "أرسلت التقرير، أليس كذلك؟","الاجتماع الساعة 10، أليس كذلك؟"],
+36:["هل يمكنك إخباري أين الصيدلية؟","هل تعرف متى تفتح العيادة؟",
+   "هل يمكنك إخباري أين ذهب؟","هل تعرف إن كان الطبيب متاحاً؟",
+   "لا أعرف أين بطاقتي.","هل يمكنك إخباري كم سعره؟"],
+37:["أعرف الإجابة.","تريد حاسوباً محمولاً جديداً.",
+   "نحتاج موظفين أكثر اليوم.","هل تفهم التعليمات؟",
+   "عنده هاتفان.","هذه البطاقة تخص الدكتور علي."],
+38:["أنهيت التقرير للتو.","لم ترد بعد.",
+   "أرسلت الملف بالفعل.","ما زلت لم أستلم الفاتورة.",
+   "لم أنهِ التقرير بعد.","ذهبت إلى بيتها بالفعل."],
+39:["كان الطبيب والممرضة كلاهما هناك.","لا أحد منهما يعرف كلمة المرور.",
+   "يمكنك إما أن تتصل أو ترسل بريداً.","لا الطابعة تعمل ولا الماسح الضوئي.",
+   "زميلاي كلاهما في إجازة.","لا يعجبني أي من الخيارين."],
+40:["كان اجتماعاً طويلاً جداً.","النظام بطيء جداً اليوم.",
+   "هي طبيبة جيدة جداً.","كان يوماً مزدحماً جداً حتى إنني نسيت الغداء.",
+   "يتكلم بسرعة كبيرة.","هم أناس لطفاء جداً."],
+41:["أريدك أن ترسل التقرير اليوم.","طلب مني المدير أن أرسل الملف.",
+   "طلبت مني أن أنتظر في الخارج.","يريد الطبيب منها أن ترتاح.",
+   "طلب منا ألا نلمس الجهاز.","نحتاج أن يفحص الفني الخادم."],
+42:["الشاشة مطفأة. شغّلها من فضلك.","أبحث عن مفاتيحي.",
+   "هذا هو النموذج. عبّئه من فضلك.","هل تستطيع أن تمرّ لتأخذني الساعة 5؟",
+   "أحتاج أن أسجّل الدخول إلى النظام.","أقلعت عن التدخين."],
+43:["سأتصل بك حين أصل.","حالما تجهز النتائج، سنبلغك.",
+   "إن لم تستعجل، سيفوتك الاجتماع.","سننتظر حتى يأتي الطبيب.",
+   "قبل أن تغادر، وقّع النموذج من فضلك.","لن أبدأ إلا إذا أخبرتني."],
+44:["هذا مكتب الطبيب.","استعرت حاسوب أحمد.",
+   "هذه الملفات قديمة.","هل تناولني تلك الأوراق؟",
+   "هو أحد أصدقائي.","غرفة الممرضات في الطابق الثاني."],
+45:["لم أرَ شيئاً.","الجميع في غرفة الاجتماعات.",
+   "لا أعرف أحداً في هذا القسم.","كل شخص عنده بطاقة.",
+   "أحتاج أن أخبرك بشيء مهم.","لم يتصل بي أحد."],
+46:["أود التحدث مع المدير.","هل تود كوباً من الشاي؟",
+   "أود حجز موعد.","هل تود أن أساعدك؟",
+   "أود تقديم شكوى من فضلك.","هل أفتح النافذة؟"],
+47:["يعتمد ذلك على المدير.","أنا مهتم بهذه الدورة.",
+   "انتظرني عند الاستقبال من فضلك.","ناقشنا الجدول الجديد.",
+   "هي متزوجة من طبيب.","هو مسؤول عن المناوبة الليلية."],
+48:["أعطتني التقرير.","الرجاء إرسال الملف لي.",
+   "هل تستطيع أن تشرح لي المشكلة؟","أرانا النظام الجديد.",
+   "سأحضر لك المستندات غداً.","هل تعيرني قلمك؟"],
+49:["اتصلت لأسأل عن موعدي.","ذهبت إلى الصيدلية لتشتري دواء.",
+   "يذاكر بجد لينجح في الاختبار.","حفظت الملف لأشاركه لاحقاً.",
+   "أكتب لأبلغك بالتأخير.","تكلّم ببطء حتى يفهمك الجميع."],
+50:["سألتني أين أعمل.","سألني هل أتكلم الإنجليزية.",
+   "طلب مني الطبيب أن أرتاح.","سألت في أي ساعة الاجتماع.",
+   "طلب منا المدير ألا نتأخر.","سألوني هل أنا متاح."],
+51:["أصلح لي الميكانيكي سيارتي.","قِيس لها ضغط دمها.",
+   "نحتاج أن يثبّت لنا فريق تقنية المعلومات البرنامج الجديد.","أُصلح له حاسوبه المحمول أمس.",
+   "سأقص شعري عند الحلاق غداً.","دُهن لهم المكتب الأسبوع الماضي."],
+52:["أعمل أيام الأحد. - وأنا كذلك.","لا أجد الملف. - ولا أنا.",
+   "تأخرت هي. - وأنا كذلك.","لا أحب المناوبات الليلية. - ولا أنا.",
+   "لقد انتهى. - وأنا كذلك.","ذهبت إلى الاجتماع. - وأنا كذلك."]
 };
 
 /* ---------- أدوات ---------- */
@@ -1424,6 +1533,20 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
 const today=()=>Math.floor((Date.now()-new Date().getTimezoneOffset()*60000)/864e5);
 const IV=[0,1,3,7,21];           /* أيام الانتظار بعد كل إجابة صحيحة */
+/* العدد والمعدود: مفرد مع 1، مثنى مع 2، جمع من 3 إلى 10، ومفرد من 11. كل قائمة = [مفرد، مثنى، جمع، واحد] */
+const NOUN={
+  card:['بطاقة','بطاقتين','بطاقات','بطاقة واحدة'],
+  day:['يوم','يومين','أيام','يوم واحد'],
+  time:['مرة','مرتين','مرات','مرة واحدة'],
+  ques:['سؤال','سؤالين','أسئلة','سؤال واحد']
+};
+const pick=(n,f)=>n===2?f[1]:(n>=3&&n<=10)||n===0?f[2]:f[0];
+function count(n,k,bold){
+  const f=NOUN[k];
+  if(n===1)return f[3];
+  if(n===2)return f[1];
+  return (bold?'<b class="num-ltr">'+n+'</b>':n)+' '+pick(n,f);
+}
 const WIDE=window.matchMedia('(min-width: 920px)');
 
 /* عزل الإنجليزي داخل النص العربي حتى لا تنقلب الأسهم وعلامات الترقيم */
@@ -1479,13 +1602,13 @@ const SEQ={};TOPICS.forEach((t,i)=>{SEQ[t.id]=i+1;});
 
 /* ---------- الحفظ ---------- */
 const KEY='grammar_map_v2';
-let S={items:{},sound:true,updatedAt:0,log:{},theme:null};
+let S={items:{},sound:true,updatedAt:0,log:{},theme:null,voice:'gb'};   /* voice: حقل مضاف في v1.1 */
 function loadLocal(){
   try{const raw=localStorage.getItem(KEY);if(raw){const o=JSON.parse(raw);if(o&&typeof o==='object'&&o.items)S=Object.assign(S,o);}}catch(e){}
   if(!S.log||typeof S.log!=='object')S.log={};
   const old=today()-120;Object.keys(S.log).forEach(k=>{if(+k<old)delete S.log[k];});
 }
-function snapshot(){return {items:S.items,sound:S.sound,updatedAt:S.updatedAt,log:S.log,theme:S.theme};}
+function snapshot(){return {items:S.items,sound:S.sound,updatedAt:S.updatedAt,log:S.log,theme:S.theme,voice:S.voice};}
 function save(){
   S.updatedAt=Date.now();
   try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}
@@ -1579,11 +1702,31 @@ function beep(kind){
 }
 const canSpeak=('speechSynthesis' in window)&&(typeof window.SpeechSynthesisUtterance!=='undefined');
 function spk(text){return canSpeak?'<button type="button" class="spk" data-act="speak" data-say="'+esc(text)+'" aria-label="استمع للجملة">'+ICON.spk+'</button>':'';}
+/* الأصوات تتحمّل متأخرة: في متصفحات أندرويد getVoices() ترجع فاضية عند أول ضغطة، فنحدّث القائمة مع voiceschanged */
+let VOICES=[];
+function loadVoices(){try{VOICES=window.speechSynthesis.getVoices()||[];}catch(e){VOICES=[];}}
+if(canSpeak){
+  loadVoices();
+  try{
+    if(window.speechSynthesis.addEventListener)window.speechSynthesis.addEventListener('voiceschanged',loadVoices);
+    else window.speechSynthesis.onvoiceschanged=loadVoices;
+  }catch(e){}
+}
+const accent=()=>S.voice==='us'?'us':'gb';
+function pickVoice(){
+  if(!VOICES.length)loadVoices();
+  const lang=v=>String(v.lang||'').replace('_','-').toLowerCase();
+  const want=accent()==='us'?'en-us':'en-gb';
+  const best=a=>a.find(v=>v.localService)||a[0];
+  const exact=VOICES.filter(v=>lang(v)===want),en=VOICES.filter(v=>/^en(-|$)/.test(lang(v)));
+  /* ما فيه صوت باللهجة المطلوبة: أقرب صوت إنجليزي. والقائمة فاضية: المحرك يختار حسب u.lang */
+  return exact.length?best(exact):en.length?best(en):null;
+}
 function speak(text){
   if(!canSpeak)return;
   try{
-    const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.92;
-    const v=(window.speechSynthesis.getVoices()||[]).find(x=>/^en[-_]/i.test(x.lang));if(v)u.voice=v;
+    const u=new SpeechSynthesisUtterance(text);u.lang=accent()==='us'?'en-US':'en-GB';u.rate=.92;
+    const v=pickVoice();if(v)u.voice=v;
     window.speechSynthesis.cancel();window.speechSynthesis.speak(u);
   }catch(e){}
 }
@@ -1603,8 +1746,8 @@ function renderHead(){
     '<div class="stats">'+
       '<div class="stat s-ok"><b>'+tt.mastered+' / '+TOPICS.length+'</b><span>قاعدة متقنة</span></div>'+
       '<div class="stat s-due"><b>'+tt.due+'</b><span>للمراجعة اليوم</span></div>'+
-      '<div class="stat s-bad"><b>'+tt.active+'</b><span>خطأ ما اختفى</span></div>'+
-      '<div class="stat s-fire"><b>'+sk+'</b><span>'+(sk===1?'يوم متتالي':'أيام متتالية')+'</span></div>'+
+      '<div class="stat s-bad"><b>'+tt.active+'</b><span>'+pick(tt.active,['خطأ ما اختفى','خطأين ما اختفوا','أخطاء ما اختفت'])+'</span></div>'+
+      '<div class="stat s-fire"><b>'+sk+'</b><span>'+pick(sk,['يوم متتالي','يومين متتاليين','أيام متتالية'])+'</span></div>'+
     '</div>';
   const h=actionsHtml(tt);
   $('#actions').innerHTML=h;$('#dock').innerHTML=h;
@@ -1730,7 +1873,7 @@ function renderProgress(){
   const rows=TOPICS.map(tp=>({tp:tp,w:stat(tp).wrong})).filter(x=>x.w>0).sort((a,b)=>b.w-a.w);
   const active=ALL.filter(it=>{const r=S.items[it.id];return r&&r.b===0&&r.w>0;});
   let h='<h2>آخر 7 أيام</h2><div class="card"><div class="week">'+week+'</div>'+
-    '<p class="weekline">'+(wn?'جاوبت <b class="num-ltr">'+wn+'</b> بطاقة هذا الأسبوع، <b class="num-ltr">'+Math.round(wok/wn*100)+'%</b> منها صح. سلسلتك: <b class="num-ltr">'+streak()+'</b> يوم.':'ما سجّلت تدريب هذا الأسبوع. جلسة قصيرة اليوم تبدأ السلسلة.')+'</p></div>';
+    '<p class="weekline">'+(wn?'جاوبت '+count(wn,'card',true)+' هذا الأسبوع، <b class="num-ltr">'+Math.round(wok/wn*100)+'%</b> منها صح. سلسلتك: '+count(streak(),'day',true)+'.':'ما سجّلت تدريب هذا الأسبوع. جلسة قصيرة اليوم تبدأ السلسلة.')+'</p></div>';
   h+='<h2>وين تغلط أكثر</h2><p class="sub">عدد مرات الخطأ في كل قاعدة. اضغط القاعدة لمراجعتها.</p>';
   if(!rows.length)h+='<div class="empty">ما سجّلت أخطاء للحين. كل جملة تغلط فيها تنحسب هنا تحت قاعدتها.</div>';
   else{
@@ -1746,15 +1889,17 @@ function renderProgress(){
     h+='<div class="row"><button type="button" class="btn primary" data-act="drill-active">درّب عليها الآن <span class="num-ltr">('+Math.min(active.length,20)+')</span></button></div>';
     h+=active.map(it=>{
       const r=S.items[it.id];
-      const text=it.kind==='f'?it.t.fx[it.i][0]:it.kind==='q'?it.t.qz[it.i][0]:'Rule card: '+it.t.en;
-      return '<div class="act-item"><p class="sent" dir="ltr">'+esc(text)+'</p><p class="meta"><span class="en" dir="ltr">'+esc(it.t.en)+'</span> · غلطت فيها '+r.w+(r.w===1?' مرة':' مرات')+'</p></div>';
+      const head=it.kind==='k'?'<p class="act-k">بطاقة القاعدة: <bdi class="en" dir="ltr">'+esc(it.t.en)+'</bdi></p>':
+        '<p class="sent" dir="ltr">'+esc(it.kind==='f'?it.t.fx[it.i][0]:it.t.qz[it.i][0])+'</p>';
+      return '<div class="act-item">'+head+'<p class="meta"><span class="en" dir="ltr">'+esc(it.t.en)+'</span> · غلطت فيها '+count(r.w,'time')+'</p></div>';
     }).join('');
   }
   $('#view-err').innerHTML=h;
 }
 
 /* ---------- نافذة القاعدة ---------- */
-let sheetTopic=null;
+let sheetTopic=null,resetTimer=0;
+const RESET_TXT='صفّر تقدّم القاعدة';
 const line=(arr,tag)=>arr.map(x=>x[1]?'<'+tag+'>'+esc(x[0])+'</'+tag+'>':esc(x[0])).join(' ');
 function formulaHtml(tp){
   const tags=['إثبات','نفي','سؤال'],lab=PNQ.has(tp.id);
@@ -1786,32 +1931,65 @@ function openSheet(id){
     '<div class="box"><h4>الصيغة</h4><div class="formula">'+formulaHtml(tp)+'</div></div>'+
     '<div class="box key"><h4>المفتاح</h4><p>'+mix(tp.key)+'</p></div>'+
     '<div class="box"><h4>أخطاء شائعة وتصحيحها</h4>'+tp.fx.slice(0,2).map((p,i)=>pairHtml(p,tp,i)).join('')+'</div>'+
-    (st.seen?'<div class="row"><button type="button" class="btn small ghost" data-act="reset-topic">صفّر تقدّم القاعدة</button></div>':'');
+    (st.seen?'<div class="row"><button type="button" class="btn small ghost" data-act="reset-topic">'+RESET_TXT+'</button></div>':'');
   showOverlay('#sheet');
 }
-function showOverlay(sel){$(sel).hidden=false;document.documentElement.classList.add('lock');const p=$('.panel',$(sel));p.scrollTop=0;const x=$('.x',p);if(x)x.focus({preventScroll:true});}
-function hideOverlay(sel){$(sel).hidden=true;if($('#sheet').hidden&&$('#drill').hidden&&$('#menu').hidden)document.documentElement.classList.remove('lock');}
+/* النوافذ: نحفظ العنصر اللي فتح النافذة ونرجّع له التركيز عند الإغلاق، و Tab يدور داخل النافذة المفتوحة */
+const OPENER={};
+const shown=el=>!!(el&&el.isConnected&&el.getClientRects().length);
+function showOverlay(sel){
+  const ov=$(sel);
+  if(ov.hidden){
+    const a=document.activeElement,d=a&&a!==document.body&&a.dataset?a.dataset:null;
+    /* الخريطة تُعاد رسمها بعد التدريب، فنحفظ وصف الزر أيضاً حتى نلقاه بعد إعادة الرسم */
+    OPENER[sel]=d?{el:a,key:a.id?'#'+a.id:d.act?'[data-act="'+d.act+'"]'+(d.t?'[data-t="'+d.t+'"]':''):''}:null;
+  }
+  ov.hidden=false;document.documentElement.classList.add('lock');
+  const p=$('.panel',ov);p.scrollTop=0;const x=$('.x',p);if(x)x.focus({preventScroll:true});
+}
+function refocus(sel){
+  const o=OPENER[sel];OPENER[sel]=null;if(!o)return;
+  const el=shown(o.el)?o.el:o.key?$$(o.key).find(shown):null;
+  if(el)try{el.focus({preventScroll:true});}catch(e){}
+}
+function hideOverlay(sel,keep){
+  $(sel).hidden=true;
+  if($('#sheet').hidden&&$('#drill').hidden&&$('#menu').hidden)document.documentElement.classList.remove('lock');
+  if(!keep)refocus(sel);
+}
+function trapTab(e){
+  const ov=['#menu','#drill','#sheet'].map(x=>$(x)).find(x=>!x.hidden);if(!ov)return;
+  const f=$$('button,textarea,input,select,a[href],[tabindex]:not([tabindex="-1"])',ov).filter(x=>!x.disabled&&shown(x));
+  if(!f.length){e.preventDefault();return;}
+  const first=f[0],last=f[f.length-1],a=document.activeElement;
+  if(!ov.contains(a)){e.preventDefault();(e.shiftKey?last:first).focus();}
+  else if(e.shiftKey&&a===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&a===last){e.preventDefault();first.focus();}
+}
 
 /* ---------- الإعدادات والنسخ الاحتياطي ---------- */
-function openMenu(msg){
+function openMenu(msg,act){
   $('#menu-panel').innerHTML=
     '<div class="p-head"><div><h2 style="font-family:var(--font-d)">الإعدادات</h2></div><button type="button" class="x" data-act="close-menu" aria-label="إغلاق">✕</button></div>'+
     '<div class="box"><div class="set-row"><span>صوت الإجابات</span><button type="button" class="btn small" data-act="sound">'+(S.sound?'شغّال':'مقفّل')+'</button></div></div>'+
     '<div class="box"><div class="set-row"><span>المظهر</span><button type="button" class="btn small" data-act="theme">'+(currentTheme()==='dark'?'ليلي':'نهاري')+'</button></div></div>'+
+    (canSpeak?'<div class="box"><div class="set-row"><span>لهجة النطق</span><button type="button" class="btn small" data-act="voice">'+(accent()==='us'?'أمريكي':'بريطاني')+'</button></div>'+
+      '<p class="note" style="margin-top:8px">الصوت نفسه من جهازك. إذا ما فيه صوت بهذي اللهجة، ينطق الجهاز بأقرب صوت إنجليزي عنده.</p></div>':'')+
     '<div class="box"><h4>نسخة احتياطية من تقدّمك</h4><p class="note">التقدّم محفوظ في هذا المتصفح فقط. انسخ النص واحفظه عندك، والصقه هنا على أي جهاز ثاني لاسترجاعه.</p>'+
       '<textarea class="backup" id="backup" spellcheck="false" autocomplete="off" aria-label="نص النسخة الاحتياطية">'+esc(JSON.stringify(snapshot()))+'</textarea>'+
       '<div class="row" style="margin-top:10px"><button type="button" class="btn small" data-act="copy-backup">انسخ النص</button><button type="button" class="btn small" data-act="import-backup">استرجع من النص</button></div>'+
       '<p class="note" id="backup-msg" role="status" style="margin-top:8px">'+esc(msg||'')+'</p></div>';
   showOverlay('#menu');
+  const b=act&&$('#menu-panel [data-act="'+act+'"]');if(b)b.focus({preventScroll:true});   /* بعد تغيير إعداد يبقى التركيز على زره */
 }
 function importBackup(){
   const msg=$('#backup-msg');
   try{
     const o=JSON.parse($('#backup').value);
     if(!o||typeof o!=='object'||!o.items||typeof o.items!=='object')throw new Error('shape');
-    S=Object.assign({items:{},sound:true,updatedAt:0,log:{},theme:null},o);
+    S=Object.assign({items:{},sound:true,updatedAt:0,log:{},theme:null,voice:'gb'},o);
     if(!S.log)S.log={};
-    save();applyTheme();renderAll();openMenu('تم الاسترجاع: '+Object.keys(S.items).length+' بطاقة.');
+    save();applyTheme();renderAll();openMenu('تم الاسترجاع: '+count(Object.keys(S.items).length,'card')+'.');
   }catch(e){msg.textContent='النص مو نسخة صحيحة. الصق النص كاملاً مثل ما نسخته.';}
 }
 function copyBackup(){
@@ -1825,9 +2003,11 @@ function copyBackup(){
 let D=null;
 function startDrill(title,items,mode,topic){
   if(!items.length)return;
-  D={title:title,queue:items.map(it=>Object.assign({},it)),pos:0,first:0,firstOk:0,missed:[],passed:[],answered:false,pending:null,mode:mode||'normal',topic:topic||null};
-  hideOverlay('#sheet');
+  D={title:title,queue:items.map(it=>Object.assign({},it)),pos:0,first:0,firstOk:0,missed:[],passed:[],okIds:[],missIds:[],aside:0,answered:false,pending:null,mode:mode||'normal',topic:topic||null};
+  const from=$('#sheet').hidden?null:OPENER['#sheet'];   /* التدريب انفتح من نافذة القاعدة: نرجع لاحقاً للزر اللي فتحها */
+  hideOverlay('#sheet',true);
   showOverlay('#drill');
+  if(from)OPENER['#drill']=from;
   renderDrill();
 }
 function pickMixed(n){
@@ -1839,22 +2019,77 @@ function pickMixed(n){
   for(const x of scored){const k=x.it.t.id;perTopic[k]=perTopic[k]||0;if(perTopic[k]>=2)continue;perTopic[k]++;out.push(x.it);if(out.length>=n)break;}
   return shuffle(out);
 }
+/* التشخيص يلف على الفروع بالدور: قاعدة من كل فرع، ثم الثانية من كل فرع، وهكذا */
 function pickDiagnostic(n){
-  return TOPICS.filter(tp=>stat(tp).seen===0).slice(0,n).map(tp=>{const i=Math.floor(Math.random()*tp.fx.length);return {id:'t'+tp.id+'f'+i,t:tp,kind:'f',i:i};});
+  const rows=BRANCHES.map(br=>TOPICS.filter(tp=>tp.b===br.id&&stat(tp).seen===0)),out=[];
+  for(let k=0;out.length<n&&rows.some(r=>r.length>k);k++)rows.forEach(r=>{if(r[k]&&out.length<n)out.push(r[k]);});
+  return out.map(tp=>{const i=Math.floor(Math.random()*tp.fx.length);return {id:'t'+tp.id+'f'+i,t:tp,kind:'f',i:i};});
 }
 function pickTestOut(tp){
   const its=itemsOf(tp),f=shuffle(its.filter(x=>x.kind==='f')).slice(0,4),q=shuffle(its.filter(x=>x.kind==='q')).slice(0,1);
   return shuffle(f.concat(q));
 }
-function norm(s,strict){
-  s=String(s).replace(/[‘’ʼ]/g,"'").replace(/[“”]/g,'"').replace(/\s+/g,' ').trim();
-  if(strict)return s;
-  s=s.toLowerCase()
-    .replace(/\bcan't\b/g,'can not').replace(/\bcannot\b/g,'can not').replace(/\bwon't\b/g,'will not')
-    .replace(/n't\b/g,' not').replace(/\bi'm\b/g,'i am').replace(/'re\b/g,' are').replace(/'ve\b/g,' have').replace(/'ll\b/g,' will')
-    .replace(/\b(it|he|she|that|there|what|who|where|here)'s\b/g,'$1 is').replace(/'d\b/g,' would');
-  return s.replace(/\s[-–—]\s/g,' ').replace(/[.,!?;:"]/g,' ').replace(/\s+/g,' ').trim();
+/* check:start — tests/check.mjs يشغّل هذا المقطع كما هو، فلا تستخدم فيه DOM */
+/* في الوضع الدقيق (strict) المسافات الداخلية تبقى كما كتبها المتعلم */
+function clean(s,strict){
+  s=String(s).replace(/[‘’ʼ]/g,"'").replace(/[“”]/g,'"');
+  return (strict?s.replace(/\s/g,' '):s.replace(/\s+/g,' ')).trim();
 }
+function expand(s){
+  return s.toLowerCase()
+    .replace(/\bcan't\b/g,'can not').replace(/\bcannot\b/g,'can not').replace(/\bwon't\b/g,'will not')
+    .replace(/n't\b/g,' not').replace(/\bi'm\b/g,'i am').replace(/'re\b/g,' are').replace(/'ve\b/g,' have').replace(/'ll\b/g,' will');
+}
+const strip=s=>s.replace(/\s[-–—]\s/g,' ').replace(/[.,!?;:"]/g,' ').replace(/\s+/g,' ').trim();
+const SHORT_S=/\b(it|he|she|that|there|what|who|where|here)'s\b/g;
+function norm(s,strict){
+  s=clean(s,strict);
+  if(strict)return s;
+  return strip(expand(s).replace(SHORT_S,'$1 is').replace(/'d\b/g,' would'));
+}
+/* ‎'s و ‎'d لهما قراءتان. has / had تُختصران فقط وهما فعل مساعد، أي قبل تصريف ثالث:
+   He's just arrived = He has just arrived. أما has to و has two phones فلا تُختصران. */
+const V3=new Set(('been become begun bought broken brought built caught chosen come cost cut done drawn driven drunk eaten fallen felt '+
+  'forgotten fought found flown given gone got gotten grown had heard held hit hurt kept known led left lent let lost made meant met paid '+
+  'put quit read run rung said sat seen sent set shown shut slept sold spent spoken stood sung swum taken taught thought thrown told '+
+  'understood won worn written').split(' '));
+const MID=new Set('not just already never ever also still always only really recently probably'.split(' '));
+function perfectAfter(rest,had){
+  const w=strip(rest).split(' ');let i=0;
+  while(i<w.length&&MID.has(w[i]))i++;
+  const x=w[i]||'';
+  if(had&&x==='better')return true;
+  return V3.has(x)||(/[a-z]{2}ed$/.test(x)&&!/^(need|feed|speed|seed|bleed|breed|hundred)$/.test(x));
+}
+/* كل القراءات الممكنة لما كتبه المتعلم */
+function readings(s,strict){
+  s=clean(s,strict);
+  if(strict)return [s];
+  s=expand(s);
+  const re=/\b(it|he|she|that|there|what|who|where|here)'s\b|'d\b/g;
+  let outs=[''],last=0,m;
+  while((m=re.exec(s))){
+    const head=s.slice(last,m.index),had=m[0]==="'d";
+    const a=had?' would':m[1]+' is',b=had?' had':m[1]+' has';
+    const both=outs.length<32&&perfectAfter(s.slice(re.lastIndex),had);
+    outs=both?outs.map(o=>o+head+a).concat(outs.map(o=>o+head+b)):outs.map(o=>o+head+a);
+    last=re.lastIndex;
+  }
+  return outs.map(o=>strip(o+s.slice(last)));
+}
+function accepts(val,goods,strict){
+  const r=readings(val,strict);
+  return [].concat(goods).some(g=>r.indexOf(norm(g,strict))>-1);
+}
+/* الجملة النموذجية بعد سؤال الاختيار: بدون مسافة قبل علامة الترقيم */
+function fullSentence(q,opt){
+  if(q.indexOf('______')<0)return opt;
+  const parts=opt.split(' / '),blanks=q.split('______').length-1;
+  let k=0;
+  const s=blanks>1&&parts.length===blanks?q.replace(/______/g,()=>parts[k++]):q.replace('______',opt);
+  return s.replace(/\s+([.,?!;:])/g,'$1').replace(/\s+/g,' ').trim();
+}
+/* check:end */
 function diffWords(a,b){
   const n=a.length,m=b.length,L=[];
   for(let i=0;i<=n;i++){L.push(new Array(m+1).fill(0));}
@@ -1887,7 +2122,7 @@ function renderDrill(){
     h+='<p class="kicker">في الجملة خطأ. صحّحه بالكتابة'+again+'</p>'+
        '<p class="badline">'+esc(bad)+'</p>'+
        '<textarea id="ans" rows="3" dir="ltr" lang="en" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" aria-label="اكتب الجملة الصحيحة">'+esc(bad)+'</textarea>'+
-       '<p class="hint" id="hint">'+(tp.strict?'هنا النقطة والمسافة والحرف الكبير محسوبة.':'')+'</p>'+
+       '<p class="hint" id="hint">'+(tp.strict?'هنا التصحيح بالحرف: نقطة، ثم مسافة واحدة بالضبط، ثم حرف كبير.':'')+'</p>'+
        '<div id="fb"></div>'+
        '<div class="row" id="d-actions"><button type="button" class="btn primary" data-act="check">تحقق</button><button type="button" class="btn ghost" data-act="reveal">ما أعرف، ورّني</button></div>';
   }else if(it.kind==='k'){
@@ -1918,7 +2153,7 @@ function fixFeedback(ok,val,revealed){
   D.answered=true;D.pending=ok;
   const d=diffWords(bad.split(' '),goods[0].split(' '));
   let h='<div class="fb '+(ok?'good':'bad')+'" role="status"><p class="fb-title">'+(ok?'صحيح':revealed?'هذا التصحيح':'مو صحيح')+'</p>';
-  if(!ok&&!revealed)h+='<p class="fb-label">كتبت</p><p class="sent">'+esc(val)+'</p>';
+  if(!ok&&!revealed)h+='<p class="fb-label">كتبت</p><p class="sent"'+(tp.strict?' style="white-space:pre-wrap"':'')+'>'+esc(val)+'</p>';
   h+='<p class="fb-label">الخطأ ثم التصحيح</p><p class="sent was"><span class="mk">✕</span>'+line(d[0],'del')+'</p><p class="sent now"><span class="mk">✓</span>'+line(d[1],'ins')+spk(goods[0])+'</p>';
   h+=whyHtml(tp,it.i);
   if(goods.length>1)h+='<p class="fb-label">ومقبول أيضاً</p>'+goods.slice(1).map(g=>'<p class="sent">'+esc(g)+'</p>').join('');
@@ -1926,7 +2161,8 @@ function fixFeedback(ok,val,revealed){
   $('#fb').innerHTML=h;
   $('#ans').disabled=true;$('#hint').textContent='';
   $('#d-actions').innerHTML='<button type="button" class="btn primary" data-act="next">التالي</button>'+
-    (!ok&&!revealed?'<button type="button" class="btn ghost" data-act="override">إجابتي صحيحة، احسبها</button>':'');
+    (ok||revealed?'':D.mode==='normal'?'<button type="button" class="btn ghost" data-act="override">إجابتي صحيحة، احسبها</button>':
+      '<button type="button" class="btn ghost" data-act="aside">استبعد السؤال، لا لي ولا علي</button>');
   beep(ok?'ok':'bad');afterAnswer();
 }
 function checkFix(){
@@ -1935,7 +2171,7 @@ function checkFix(){
   const tp=it.t,pair=tp.fx[it.i],strict=!!tp.strict,val=$('#ans').value;
   if(!val.trim())return;
   if(norm(val,strict)===norm(pair[0],strict)){$('#hint').textContent='ما غيّرت شي. في الجملة خطأ، عدّله ثم اضغط تحقق.';return;}
-  fixFeedback([].concat(pair[1]).some(g=>norm(g,strict)===norm(val,strict)),val,false);
+  fixFeedback(accepts(val,pair[1],strict),val,false);
 }
 function keyReveal(){
   if(!D||D.answered)return;
@@ -1949,12 +2185,6 @@ function keyReveal(){
 function keyAnswer(ok){
   if(!D||D.answered||cur().kind!=='k')return;
   D.answered=true;D.pending=ok;if(ok)beep('ok');nextItem();
-}
-function fullSentence(q,opt){
-  if(q.indexOf('______')<0)return opt;
-  const parts=opt.split(' / '),blanks=q.split('______').length-1;
-  if(blanks>1&&parts.length===blanks){let k=0;return q.replace(/______/g,()=>parts[k++]);}
-  return q.replace(/\s*______\s*/,opt.charAt(0)==='.'||opt.charAt(0)===','?opt+' ':' '+opt+' ').replace(/\s+/g,' ').trim();
 }
 function answerOpt(o,btn){
   if(!D||D.answered)return;
@@ -1974,21 +2204,39 @@ function commit(){
   grade(it.id,D.pending);
   if(!it.again){
     D.first++;
-    if(D.pending){D.firstOk++;if(D.passed.indexOf(it.t.id)<0)D.passed.push(it.t.id);}
-    else{if(D.missed.indexOf(it.t.id)<0)D.missed.push(it.t.id);if(D.mode==='normal')D.queue.push(Object.assign({},it,{again:true,order:null}));}
+    if(D.pending){D.firstOk++;D.okIds.push(it.id);if(D.passed.indexOf(it.t.id)<0)D.passed.push(it.t.id);}
+    else{D.missIds.push(it.id);if(D.missed.indexOf(it.t.id)<0)D.missed.push(it.t.id);if(D.mode==='normal')D.queue.push(Object.assign({},it,{again:true,order:null}));}
   }
   D.answered=false;D.pending=null;
 }
 function nextItem(){if(!D)return;commit();D.pos++;renderDrill();}
 function topicBtn(tp){return '<button type="button" class="btn" data-act="open-topic" data-t="'+tp.id+'"><span class="en" dir="ltr">'+esc(tp.en)+'</span> · '+esc(tp.ar)+'</button>';}
+/* نجاح «أعرفها، اختبرني»: بطاقات الاختبار الصحيحة تصير متقنة، وبقية بطاقات القاعدة تنتظر تأكيداً بعد 3 أيام */
+const TEST_MIN=4;
+function passTestOut(tp,okIds){
+  const t=today();let left=0;
+  itemsOf(tp).forEach(it=>{
+    const r=S.items[it.id]||{b:0,d:t,r:0,w:0};
+    if(okIds.indexOf(it.id)>-1)S.items[it.id]={b:3,d:t+7,r:r.r,w:r.w};
+    else if(r.b<3){S.items[it.id]={b:2,d:t+3,r:r.r,w:r.w};left++;}
+  });
+  save();
+  return left;
+}
 function renderSummary(){
   const miss=D.missed.map(id=>TOPICS.find(t=>t.id===id));
   let h='<div class="d-top"><span class="d-title">'+mix(D.title)+'</span><button type="button" class="x" data-act="close-drill" aria-label="إغلاق">✕</button></div>'+
     '<p class="kicker">من أول محاولة</p><p class="sum-score">'+D.firstOk+' / '+D.first+'</p>';
+  if(D.aside)h+='<p class="kicker" style="font-weight:400">استبعدت '+count(D.aside,'ques')+'، وما انحسبت في النتيجة.</p>';
   if(D.mode==='testout'){
-    if(D.first>0&&D.firstOk===D.first){
-      const t=today();itemsOf(D.topic).forEach(it=>{const r=S.items[it.id]||{r:0,w:0};S.items[it.id]={b:3,d:t+7,r:r.r,w:r.w};});save();
-      h+='<p class="verdict ok">نجحت. القاعدة انحسبت متقنة.</p><p class="kicker" style="font-weight:400">بترجع لك بعد أسبوع للتأكيد.</p>';
+    if(D.first>=TEST_MIN&&D.firstOk===D.first){
+      const left=passTestOut(D.topic,D.okIds);
+      h+='<p class="verdict ok">نجحت في الاختبار.</p><p class="kicker" style="font-weight:400">'+
+        (left?'اللي جاوبتها صح انحسبت متقنة. باقي '+count(left,'card')+' من القاعدة تحتاج تأكيد: بترجع لك بعد 3 أيام، وإذا جاوبتها صح تصير القاعدة متقنة.':
+              'القاعدة انحسبت متقنة. بطاقات الاختبار بترجع لك بعد أسبوع للتأكيد.')+'</p>';
+    }else if(D.first<TEST_MIN&&D.firstOk===D.first){
+      h+='<p class="verdict no">الاختبار ما اكتمل.</p><p class="kicker" style="font-weight:400">النجاح يحتاج '+count(TEST_MIN,'ques')+' محسوبة على الأقل وكلها صح. جرّب الاختبار مرة ثانية.</p>'+
+        '<div class="miss">'+topicBtn(D.topic)+'</div>';
     }else{
       h+='<p class="verdict no">لسا ما ثبتت.</p><p class="kicker" style="font-weight:400">الجمل اللي غلطت فيها دخلت «راجع اليوم». درّب القاعدة كاملة ثم جرّب مرة ثانية.</p>'+
         '<div class="miss">'+topicBtn(D.topic)+'</div>';
@@ -1998,8 +2246,13 @@ function renderSummary(){
     if(miss.length)h+='<p class="kicker">قواعد تحتاج شغل. ابدأ فيها:</p><div class="miss">'+miss.map(topicBtn).join('')+'</div>';
     h+='<p class="kicker" style="font-weight:400">اللي جاوبتها صح بترجع لك بكرة للتأكيد، واللي غلطت فيها دخلت «راجع اليوم».</p>';
   }else if(miss.length){
+    /* grade(): الغلط يخلي البطاقة مستحقة اليوم، وتصحيحها في المحاولة الثانية يأجّلها لبكرة */
+    const t=today(),open=D.missIds.filter(id=>{const r=S.items[id];return r&&r.d<=t;}).length;
     h+='<p class="kicker">قواعد غلطت فيها. اضغط للمراجعة:</p><div class="miss">'+miss.map(topicBtn).join('')+'</div>'+
-      '<p class="kicker" style="font-weight:400">الجمل اللي غلطت فيها بترجع لك بكرة في «راجع اليوم».</p>';
+      '<p class="kicker" style="font-weight:400">'+
+      (open===0?'البطاقات اللي غلطت فيها صحّحتها في المحاولة الثانية، وبترجع لك بكرة للتأكيد.':
+       open===D.missIds.length?'البطاقات اللي غلطت فيها موجودة الحين في «راجع اليوم».':
+       'اللي صحّحتها في المحاولة الثانية بترجع لك بكرة، والباقي ('+count(open,'card')+') موجود الحين في «راجع اليوم».')+'</p>';
   }else{
     h+='<p class="verdict ok">ولا غلطة.</p><p class="kicker" style="font-weight:400">البطاقات هذي بترجع لك بعد أيام للتأكيد.</p>';
   }
@@ -2010,7 +2263,7 @@ function renderSummary(){
 }
 function closeDrill(){
   if(D&&D.answered)commit();
-  D=null;hideOverlay('#drill');renderAll();
+  D=null;hideOverlay('#drill',true);renderAll();refocus('#drill');
 }
 
 /* ---------- العرض العام ---------- */
@@ -2055,18 +2308,28 @@ document.addEventListener('click',e=>{
   else if(act==='drill-active'){startDrill('أخطاء ما اختفت',shuffle(ALL.filter(it=>{const r=S.items[it.id];return r&&r.b===0&&r.w>0;})).slice(0,20));}
   else if(act==='drill-topic'){if(sheetTopic){const its=itemsOf(sheetTopic);startDrill(sheetTopic.en,[its[0]].concat(shuffle(its.slice(1))));}}
   else if(act==='test-out'){if(sheetTopic)startDrill('اختبار: '+sheetTopic.en,pickTestOut(sheetTopic),'testout',sheetTopic);}
-  else if(act==='reset-topic'){if(sheetTopic){itemsOf(sheetTopic).forEach(it=>{delete S.items[it.id];});save();renderAll();openSheet(sheetTopic.id);}}
+  else if(act==='reset-topic'){
+    if(!sheetTopic)return;
+    if(el.dataset.armed){clearTimeout(resetTimer);itemsOf(sheetTopic).forEach(it=>{delete S.items[it.id];});save();renderAll();openSheet(sheetTopic.id);}
+    else{   /* الضغطة الأولى تجهّز الزر فقط. بدون ضغطة ثانية خلال 4 ثواني يرجع كما كان */
+      el.dataset.armed='1';el.classList.add('danger');el.textContent='متأكد؟ اضغط مرة ثانية وينمسح تقدّمها';
+      clearTimeout(resetTimer);
+      resetTimer=setTimeout(()=>{if(el.isConnected){delete el.dataset.armed;el.classList.remove('danger');el.textContent=RESET_TXT;}},4000);
+    }
+  }
   else if(act==='close-sheet')hideOverlay('#sheet');
   else if(act==='close-drill')closeDrill();
   else if(act==='menu')openMenu();
   else if(act==='close-menu')hideOverlay('#menu');
   else if(act==='copy-backup')copyBackup();
   else if(act==='import-backup')importBackup();
-  else if(act==='theme'){S.theme=currentTheme()==='dark'?'light':'dark';save();applyTheme();if(!$('#menu').hidden)openMenu();queueWires();}
-  else if(act==='sound'){S.sound=!S.sound;save();if(S.sound)beep('ok');if(!$('#menu').hidden)openMenu();}
+  else if(act==='theme'){S.theme=currentTheme()==='dark'?'light':'dark';save();applyTheme();if(!$('#menu').hidden)openMenu('','theme');queueWires();}
+  else if(act==='sound'){S.sound=!S.sound;save();if(S.sound)beep('ok');if(!$('#menu').hidden)openMenu('','sound');}
+  else if(act==='voice'){S.voice=accent()==='us'?'gb':'us';save();openMenu('','voice');speak('This is how the sentences will sound.');}
   else if(act==='check')checkFix();
   else if(act==='reveal'){if(D&&!D.answered)fixFeedback(false,'',true);}
-  else if(act==='override'){if(D&&D.answered){D.pending=true;el.remove();const f=$('#fb .fb');f.classList.remove('bad');f.classList.add('good');$('.fb-title',f).textContent='انحسبت صحيحة';}}
+  else if(act==='override'){if(D&&D.answered&&D.mode==='normal'){D.pending=true;el.remove();const f=$('#fb .fb');f.classList.remove('bad');f.classList.add('good');$('.fb-title',f).textContent='انحسبت صحيحة';afterAnswer();}}
+  else if(act==='aside'){if(D&&D.answered&&D.mode!=='normal'&&D.pending!==null){D.pending=null;D.aside++;el.remove();const f=$('#fb .fb');f.classList.remove('bad');f.classList.add('aside');$('.fb-title',f).textContent='انستبعد السؤال: ما ينحسب لك ولا عليك';afterAnswer();}}
   else if(act==='next')nextItem();
   else if(act==='k-show')keyReveal();
   else if(act==='k-yes')keyAnswer(true);
@@ -2075,6 +2338,7 @@ document.addEventListener('click',e=>{
 });
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){if(!$('#menu').hidden)hideOverlay('#menu');else if(!$('#sheet').hidden)hideOverlay('#sheet');else if(!$('#drill').hidden)closeDrill();return;}
+  if(e.key==='Tab'){trapTab(e);return;}
   if(e.key==='Enter'&&e.target.id==='ans'&&!e.shiftKey){e.preventDefault();checkFix();}
 });
 $('#search').addEventListener('input',e=>{query=e.target.value.toLowerCase().trim();renderMap();});
